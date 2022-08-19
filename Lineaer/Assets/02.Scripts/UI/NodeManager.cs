@@ -90,6 +90,7 @@ public class NodeManager : MonoSingleton<NodeManager>
         Sequence seq = DOTween.Sequence();
         for (int i = 0; i < selects.Length; i++)
         {
+            selectBtns[i].gameObject.SetActive(true);
             seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPosX(btnOriginPos[i].x, 1f).SetEase(Ease.InOutBack));
             seq.AppendInterval(0.125f);
         }
