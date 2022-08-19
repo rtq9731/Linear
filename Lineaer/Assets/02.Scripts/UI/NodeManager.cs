@@ -90,7 +90,10 @@ public class NodeManager : MonoSingleton<NodeManager>
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curSelectNum++;
-                    // TODO : 여기서 수치 조정하기
+                    StateController.Instance.AddStateValue(StateType.MONEY, selects[y].resultInfo.plusMoney);
+                    StateController.Instance.AddStateValue(StateType.MENTAL, selects[y].resultInfo.plusMental);
+                    StateController.Instance.AddStateValue(StateType.HEALTH, selects[y].resultInfo.plusHealth);
+                    StateController.Instance.AddStateValue(StateType.EFFORT, selects[y].resultInfo.plusWriting);
                     SetLayout();
                 }); // 만약 분기 이벤트가 아니라면 다음 선택지로 그냥 넘어가게
             }

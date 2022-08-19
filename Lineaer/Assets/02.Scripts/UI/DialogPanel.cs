@@ -34,6 +34,6 @@ public class DialogPanel : MonoBehaviour
         }
 
         onComplete?.Invoke();
-        dialogNum = 0;
+        yield return null;
     }
 }
