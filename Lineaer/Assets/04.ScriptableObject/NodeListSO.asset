@@ -176,16 +176,27 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
+<<<<<<< Updated upstream
     pageCnt: 5
   - nodes:
     - idx: 0
       dialogs:
       - "\uC548\uB155\uD558\uC138\uC694!"
+=======
+  - nodes:
+    - idx: 0
+      dialogs:
+      - "\uC548\uB155\uD558\uC138\uC694! \uC170\uC775\uC2A4\uD53C\uC5B4\uC528, \uC0C8\uB85C
+        \uBC1B\uC544\uC628 \uC2E0\uC120\uD55C \uC57C\uCC44\uC778\uB370 \uD558\uB098
+        \uB4DC\uC2DC\uACA0\uC5B4\uC694? \uBB3C\uB860 \uB3C8\uC740 \uB530\uB85C\uB78D\uB2C8\uB2E4
+        \uD6C4\uD6C4"
+>>>>>>> Stashed changes
       talkerSprite: {fileID: 0}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
+<<<<<<< Updated upstream
         selectInfo: "\uC548\uB155\uD558\uC138\uC694, \uADF8\uB7F0\uB370 \uB204\uAD6C\uC138\uC694?"
         result: 1
         resultInfo:
@@ -201,20 +212,49 @@ MonoBehaviour:
         result: 1
         resultInfo:
           plusMoney: 0
+=======
+        selectInfo: "\uC544, \uB135 \uC798 \uBA39\uC744\uAC8C\uC694 (\uAC74\uAC15
+          20 \uC99D\uAC00, \uB3C8 10 \uAC10\uC18C)"
+        result: 1
+        resultInfo:
+          plusMoney: -10
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 20
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uC544\uB1E8, \uAD1C\uCC2E\uC744 \uAC70 \uAC19\uB124\uC694 \u314E\u314E
+          (\uB3C8 10 \uC99D\uAC00)"
+        result: 1
+        resultInfo:
+          plusMoney: 10
+>>>>>>> Stashed changes
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
     - idx: 1
       dialogs:
+<<<<<<< Updated upstream
       - "\uC800\uB294 \uC791\uAC00\uC758 \uC694\uC815\uC774\uC5D0\uC694. \uC170\uC775\uC2A4\uD53C\uC5B4\uC528. "
       - "\uC170\uC775\uC2A4\uD53C\uC5B4\uC528\uB294 \uC0AC\uC2E4 \uC5C4\uCCAD\uB09C
         \uB300\uBB38\uD638\uAC00 \uB420 \uC7AC\uB2A5\uC744 \uAC16\uACE0 \uC788\uB2F5\uB2C8\uB2E4."
+=======
+      - "\uB2F9\uC2E0\uC740 \uB2E4\uB978 \uC0AC\uB78C\uC774 \uC4F4 \uAE00\uC744 \uC77D\uB358
+        \uB3C4\uC911 \uC601\uAC10\uC774 \uB5A0\uC62C\uB790\uC2B5\uB2C8\uB2E4. \uB2F9\uC2E0\uC774
+        \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
+>>>>>>> Stashed changes
       talkerSprite: {fileID: 0}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
+<<<<<<< Updated upstream
         selectInfo: "\uC81C\uAC00\uC694?"
+=======
+        selectInfo: "\uB300\uC911\uC801\uC774\uACE0 \uC0C1\uC5C5\uC801\uC778 \uC18C\uC124(\uB3C8
+          +20, \uD544\uB825 -10)"
+>>>>>>> Stashed changes
         result: 2
         resultInfo:
           plusMoney: 0
@@ -340,4 +380,7 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
+<<<<<<< Updated upstream
     pageCnt: 4
+=======
+>>>>>>> Stashed changes
