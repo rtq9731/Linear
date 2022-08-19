@@ -18,6 +18,9 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     [SerializeField] RectTransform mainLayout = null;
 
+    [SerializeField] AudioSource audioSource = null;
+    [SerializeField] AudioClip[] excutionSounds = null;
+
     Vector2[] btnOriginPos = new Vector2[3];
 
     int curChapter = 0;
@@ -28,7 +31,6 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selectBtns.Length; i++)
         {
             btnOriginPos[i] = selectBtns[i].GetComponent<RectTransform>().anchoredPosition;
-            Debug.Log(btnOriginPos[i]);
             selectBtns[i].gameObject.SetActive(false);
         }
         SetLayout();
@@ -59,8 +61,12 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public void SetEndLayout(int endNum)
     {
-        endLayout[endNum].gameObject.SetActive(true);
-        mainLayout.gameObject.SetActive(false);
+        ScreenFader.Instance.ScreenFade(4f, excutionSounds[endNum].length, () =>
+        {
+            audioSource.clip = excutionSounds[endNum];
+            endLayout[endNum].gameObject.SetActive(true);
+            mainLayout.gameObject.SetActive(false);
+        });
     }
 
     public void SetBtns(SelectInfo[] selects)
