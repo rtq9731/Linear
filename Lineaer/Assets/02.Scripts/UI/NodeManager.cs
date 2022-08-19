@@ -93,5 +93,6 @@ public class NodeManager : MonoSingleton<NodeManager>
             seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPosX(btnOriginPos[i].x, 1f).SetEase(Ease.InOutBack));
             seq.AppendInterval(0.125f);
         }
+        seq.Play();
     }
 }
