@@ -9,6 +9,7 @@ public class ChapterListSO : ScriptableObject
     public List<ChapterInfo> chapters = null;
 }
 
+[System.Serializable]
 public class ChapterInfo
 {
     public List<NodeInfo> nodes = new List<NodeInfo>(5); // 챕터 페이지 수
