@@ -35,6 +35,10 @@ public class NodeManager : MonoSingleton<NodeManager>
     public void SetLayout()
     {
         NodeInfo nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
+        if(curSelectNum >= 5)
+        {
+            nodeInfo = data.chapters[curChapter].endNode;
+        }
         dialogPanel.SetDialog(nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
     }
 

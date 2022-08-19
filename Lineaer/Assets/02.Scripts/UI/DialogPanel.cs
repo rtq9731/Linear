@@ -17,10 +17,10 @@ public class DialogPanel : MonoBehaviour
     {
         this.dialogs = dialogs;
         dialogNum = 0;
-        StartCoroutine(Dialog());
+        StartCoroutine(Dialog(onComplete));
     }
 
-    private IEnumerator Dialog()
+    private IEnumerator Dialog(System.Action onComplete)
     {
         while (dialogs.Length < dialogNum)
         {
@@ -31,5 +31,7 @@ public class DialogPanel : MonoBehaviour
             imageDialogComplete.gameObject.SetActive(false);
             dialogNum++;
         }
+
+        onComplete.Invoke();
     }
 }
