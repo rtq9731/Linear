@@ -2,7 +2,7 @@ public enum StateType
 {
     MONEY,
     MENTAL,
-    EFFORT,
+    WRITING,
     HEALTH,
     COUNT
 }

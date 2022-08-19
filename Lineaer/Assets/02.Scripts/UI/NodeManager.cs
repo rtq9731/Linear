@@ -70,7 +70,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             int y = i;
             if (selects[i].isChapterSelect)
             {
-                selectBtns[selects[i].idx].onClick.AddListener(() => 
+                selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curChapter = selects[y].result;
                     curSelectNum = 0;
@@ -93,7 +93,7 @@ public class NodeManager : MonoSingleton<NodeManager>
                     StateController.Instance.AddStateValue(StateType.MONEY, selects[y].resultInfo.plusMoney);
                     StateController.Instance.AddStateValue(StateType.MENTAL, selects[y].resultInfo.plusMental);
                     StateController.Instance.AddStateValue(StateType.HEALTH, selects[y].resultInfo.plusHealth);
-                    StateController.Instance.AddStateValue(StateType.EFFORT, selects[y].resultInfo.plusWriting);
+                    StateController.Instance.AddStateValue(StateType.WRITING, selects[y].resultInfo.plusWriting);
                     SetLayout();
                 }); // 만약 분기 이벤트가 아니라면 다음 선택지로 그냥 넘어가게
             }
