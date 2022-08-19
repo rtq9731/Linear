@@ -9,6 +9,7 @@ public class NodeManager : MonoSingleton<NodeManager>
 {
     [SerializeField] ChapterListSO data = null;
     [SerializeField] DialogPanel dialogPanel = null;
+    [SerializeField] DialogPanel endDialogPanel = null;
 
     [SerializeField] Text textdialog = null;
 
@@ -19,7 +20,6 @@ public class NodeManager : MonoSingleton<NodeManager>
     [SerializeField] RectTransform mainLayout = null;
 
     [SerializeField] AudioSource audioSource = null;
-    [SerializeField] AudioClip[] excutionSounds = null;
 
     Vector2[] btnOriginPos = new Vector2[3];
 
@@ -59,16 +59,6 @@ public class NodeManager : MonoSingleton<NodeManager>
         dialogPanel.SetDialog(nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
     }
 
-    public void SetEndLayout(int endNum)
-    {
-        ScreenFader.Instance.ScreenFade(4f, excutionSounds[endNum].length, () =>
-        {
-            audioSource.clip = excutionSounds[endNum];
-            endLayout[endNum].gameObject.SetActive(true);
-            mainLayout.gameObject.SetActive(false);
-        });
-    }
-
     public void SetBtns(SelectInfo[] selects)
     {
         for (int i = 0; i < selects.Length; i++)
@@ -88,8 +78,14 @@ public class NodeManager : MonoSingleton<NodeManager>
             {
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
-                    SetEndLayout(selects[y].result);
+                    curChapter = selects[y].result;
+                    curSelectNum = 0;
+                    SetLayout();
                 }); // 만약 엔딩 이벤트라면 엔딩 화면 불러오기
+            }
+            else if (selects[i].isRestartSelect)
+            {
+                selectBtns[selects[i].idx].onClick.AddListener(() => UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene"));
             }
             else
             {

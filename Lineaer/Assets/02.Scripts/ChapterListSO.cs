@@ -38,6 +38,7 @@ public class SelectInfo
 {
     public bool isChapterSelect = false;
     public bool isEndSelect = false;
+    public bool isRestartSelect = false;
     public int idx = 0;
     public string selectInfo;
     public int result = 0;
