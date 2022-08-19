@@ -39,13 +39,13 @@ public class NodeManager : MonoSingleton<NodeManager>
     public void SetLayout()
     {
         NodeInfo nodeInfo = null;
-        if (curSelectNum >= data.chapters[curChapter].pageCnt)
+        if (curSelectNum >= data.chapters.Find(item => item.idx == curChapter).pageCnt)
         {
-            nodeInfo = data.chapters[curChapter].endNode;
+            nodeInfo = data.chapters.Find(item => item.idx == curChapter).endNode;
         }
         else
         {
-            nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
+            nodeInfo = data.chapters.Find(item => item.idx == curChapter).nodes[curSelectNum];
         }
 
         for (int i = 0; i < selectBtns.Length; i++)
@@ -79,8 +79,13 @@ public class NodeManager : MonoSingleton<NodeManager>
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curChapter = selects[y].result;
+                    ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () => 
+                    {
+                        audioSource.Play();
+                        SetLayout();
+                    });
+
                     curSelectNum = 0;
-                    SetLayout();
                 }); // 만약 엔딩 이벤트라면 엔딩 화면 불러오기
             }
             else if (selects[i].isRestartSelect)

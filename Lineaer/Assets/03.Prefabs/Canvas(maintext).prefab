@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDialog: {fileID: 1935670346}
+  imageTalker: {fileID: 8779452731311619673}
   imageDialogComplete: {fileID: 2885604991557944220}
   clickSounds:
   - {fileID: 8300000, guid: 18154aeab82509f4ba699c0c561f09ef, type: 3}
@@ -1345,6 +1346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: e1442953efce2104ea1238f7e5532b1e, type: 2}
   dialogPanel: {fileID: 4001185015685432858}
+  endDialogPanel: {fileID: 0}
   textdialog: {fileID: 1935670346}
   selectBtns:
   - {fileID: 3658466028152035783}
@@ -1352,7 +1354,7 @@ MonoBehaviour:
   - {fileID: 5873094574891746062}
   endLayout:
   - {fileID: 0}
-  mainLayout: {fileID: 3084936289625013533}
+  mainLayout: {fileID: 0}
   audioSource: {fileID: 1176934241}
 --- !u!82 &1176934241
 AudioSource:
@@ -1364,9 +1366,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: afbb36a2df24ca145b00c7b987ef821c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -16,7 +16,7 @@ public class ScreenFader : MonoSingleton<ScreenFader>
     {
         float timer = 0f;
 
-        while (timer >= 1f)
+        while (timer <= 1f)
         {
             timer += Time.deltaTime / (fadeTime / 2);
             fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(0, 1, timer));
@@ -29,7 +29,7 @@ public class ScreenFader : MonoSingleton<ScreenFader>
 
         timer = 0f;
 
-        while (timer >= 1f)
+        while (timer <= 1f)
         {
             timer += Time.deltaTime / (fadeTime / 2);
             fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(1, 0, timer));
