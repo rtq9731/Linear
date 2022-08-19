@@ -10,7 +10,6 @@ public class NodeManager : MonoSingleton<NodeManager>
     [SerializeField] ChapterListSO data = null;
     [SerializeField] DialogPanel dialogPanel = null;
     [SerializeField] DialogPanel endDialogPanel = null;
-    [SerializeField] Image charImage = null;
 
     [SerializeField] Text textdialog = null;
 
@@ -57,7 +56,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             selectBtns[i].gameObject.SetActive(false); // ¹öÆ° ²ô±â
         }
 
-        dialogPanel.SetDialog(nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
+        dialogPanel.SetDialog(nodeInfo.sprites, nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
     }
 
     public void SetBtns(SelectInfo[] selects)

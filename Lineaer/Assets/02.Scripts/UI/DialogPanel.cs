@@ -7,30 +7,36 @@ using DG.Tweening;
 public class DialogPanel : MonoBehaviour
 {
     [SerializeField] Text textDialog;
+    [SerializeField] Image imageTalker = null;
     [SerializeField] Image imageDialogComplete = null;
     [SerializeField] AudioClip[] clickSounds = null;
     [SerializeField] AudioSource audioSource = null;
 
-    string strText = "";
-
     Coroutine routine = null;
 
+    Sprite[] sprites = null;
     string[] dialogs = null;
 
-    int i = 0;
+    int dialogNum = 0;
 
     bool isSkip = false;
 
-    public void SetDialog(string[] dialogs, System.Action onComplete)
+    public void SetDialog(Sprite[] sprites, string[] dialogs, System.Action onComplete)
     {
         this.dialogs = dialogs;
-        i = 0;
+        this.sprites = sprites;
+        dialogNum = 0;
         isSkip = false;
         if (routine != null)
         {
             StopCoroutine(routine);
         }
         routine = StartCoroutine(Dialog(onComplete));
+    }
+
+    public void SetDialog()
+    {
+        StartCoroutine(Dialog(() => { }));
     }
 
     private void Update()
@@ -44,44 +50,23 @@ public class DialogPanel : MonoBehaviour
         }
     }
 
-    private IEnumerator Dialog(string[] dialogs)
-    {
-        for (int i = 0; i < dialogs.Length; i++)
-        {
-            for (int j = 0; j < dialogs[i].Length; j++)
-            {
-                textDialog.text += dialogs[i][j];
-                if (isSkip)
-                {
-                    isSkip = false;
-                    textDialog.text = dialogs[i];
-                    break;
-                }
-                audioSource.clip = clickSounds[Random.Range(0, clickSounds.Length)];
-                audioSource.Play();
-                yield return new WaitForSeconds(0.1f);
-
-                imageDialogComplete.gameObject.SetActive(true);
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-                imageDialogComplete.gameObject.SetActive(false);
-            }
-        }
-    }
-
     private IEnumerator Dialog(System.Action onComplete)
     {
-        while (dialogs.Length > i)
+        while (dialogs.Length > dialogNum)
         {
-            int x = i;
+            int x = dialogNum;
             textDialog.text = "";
+            imageTalker.sprite = sprites[dialogNum];
 
-            for (int i = 0; i < dialogs[this.i].Length; i++)
+            imageTalker.rectTransform.sizeDelta = sprites[dialogNum].rect.size / 2f;
+
+            for (int i = 0; i < dialogs[dialogNum].Length; i++)
             {
-                textDialog.text += dialogs[this.i][i];
+                textDialog.text += dialogs[dialogNum][i];
                 if(isSkip)
                 {
                     isSkip = false;
-                    textDialog.text = dialogs[this.i];
+                    textDialog.text = dialogs[dialogNum];
                     break;
                 }
                 audioSource.clip = clickSounds[Random.Range(0, clickSounds.Length)];
@@ -93,7 +78,7 @@ public class DialogPanel : MonoBehaviour
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             imageDialogComplete.gameObject.SetActive(false);
 
-            i++;
+            dialogNum++;
             isSkip = false;
         }
 
