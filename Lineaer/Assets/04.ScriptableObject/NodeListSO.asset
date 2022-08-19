@@ -10,6 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d61b40805c28164abb69726f083d9d0, type: 3}
-  m_Name: testSO
+  m_Name: NodeListSO
   m_EditorClassIdentifier: 
-  name: 
