@@ -9,6 +9,8 @@ public class DialogPanel : MonoBehaviour
     [SerializeField] Text textDialog;
     [SerializeField] Image imageDialogComplete = null;
 
+    Coroutine routine = null;
+
     string[] dialogs = null;
 
     int dialogNum = 0;
@@ -17,7 +19,11 @@ public class DialogPanel : MonoBehaviour
     {
         this.dialogs = dialogs;
         dialogNum = 0;
-        StartCoroutine(Dialog(onComplete));
+        if(routine != null)
+        {
+            StopCoroutine(routine);
+        }
+        routine = StartCoroutine(Dialog(onComplete));
     }
 
     private IEnumerator Dialog(System.Action onComplete)
@@ -27,6 +33,7 @@ public class DialogPanel : MonoBehaviour
             textDialog.text = "";
             Tween tween = textDialog.DOText(dialogs[dialogNum], dialogs[dialogNum].Length * 0.1f).SetEase(Ease.Linear);
             yield return new WaitForSeconds(dialogs[dialogNum].Length * 0.1f);
+            Debug.Log(dialogs[dialogNum]);
             imageDialogComplete.gameObject.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             imageDialogComplete.gameObject.SetActive(false);
@@ -34,6 +41,5 @@ public class DialogPanel : MonoBehaviour
         }
 
         onComplete?.Invoke();
-        yield return null;
     }
 }
