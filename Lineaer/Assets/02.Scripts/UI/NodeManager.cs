@@ -12,6 +12,7 @@ public class NodeManager : MonoBehaviour
     readonly int chapterPage = 5;
 
     [SerializeField] NodeListSO data = null;
+    [SerializeField] DialogPanel dialogPanel = null;
 
     [SerializeField] Text textdialog = null;
 
@@ -36,11 +37,13 @@ public class NodeManager : MonoBehaviour
     public void SetLayout(NodeInfo nodeInfo)
     {
         SetBtns(nodeInfo.selects);
+        dialogPanel.SetDialog(nodeInfo.dialogs);
     }
 
     public void SetLayout()
     {
         NodeInfo nodeInfo = data.nodes[chapterPage * curChapter + curSelectNum];
+
 
         SetBtns(nodeInfo.selects);
     }
@@ -81,6 +84,7 @@ public class NodeManager : MonoBehaviour
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curSelectNum++;
+                    // TODO : 여기서 수치 조정하기
                     SetLayout();
                 }); // 만약 분기 이벤트가 아니라면 다음 선택지로 그냥 넘어가게
             }

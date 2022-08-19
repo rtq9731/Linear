@@ -25,5 +25,16 @@ public class SelectInfo
     public int idx = 0;
     public string selectInfo;
     public int result = 0;
+    public ResultInfo resultInfo = null;
 }
+
+[System.Serializable]
+public class ResultInfo
+{
+    public int plusMoney = 0;
+    public int plusMental = 0;
+    public int plusWriting = 0;
+    public int plusHealth = 0;
+}
+
 
