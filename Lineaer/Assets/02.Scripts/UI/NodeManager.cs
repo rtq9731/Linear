@@ -10,6 +10,7 @@ public class NodeManager : MonoSingleton<NodeManager>
     [SerializeField] ChapterListSO data = null;
     [SerializeField] DialogPanel dialogPanel = null;
     [SerializeField] DialogPanel endDialogPanel = null;
+    [SerializeField] Image charImage = null;
 
     [SerializeField] Text textdialog = null;
 

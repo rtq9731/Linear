@@ -29,7 +29,7 @@ public class NodeInfo
 {
     public int idx = 0;
     [TextArea] public string[] dialogs = null;
-    public Sprite talkerSprite = null;
+    public Sprite[] sprites = null;
     public SelectInfo[] selects = null;
 }
 
