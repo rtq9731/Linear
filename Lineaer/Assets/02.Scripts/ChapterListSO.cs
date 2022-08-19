@@ -14,6 +14,7 @@ public class ChapterInfo
 {
     public List<NodeInfo> nodes = new List<NodeInfo>(5); // 챕터 페이지 수
     public NodeInfo endNode = null;
+    public int pageCnt = 5;
     public void Shuffle()
     {
         System.Random rng = new System.Random();

@@ -176,3 +176,168 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
+    pageCnt: 5
+  - nodes:
+    - idx: 0
+      dialogs:
+      - "\uC548\uB155\uD558\uC138\uC694!"
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uC548\uB155\uD558\uC138\uC694, \uADF8\uB7F0\uB370 \uB204\uAD6C\uC138\uC694?"
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uCC98\uC74C \uBCF4\uB294 \uBD84\uC778 \uAC70 \uAC19\uC740\uB370,
+          \uB204\uAD6C\uC138\uC694?"
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    - idx: 1
+      dialogs:
+      - "\uC800\uB294 \uC791\uAC00\uC758 \uC694\uC815\uC774\uC5D0\uC694. \uC170\uC775\uC2A4\uD53C\uC5B4\uC528. "
+      - "\uC170\uC775\uC2A4\uD53C\uC5B4\uC528\uB294 \uC0AC\uC2E4 \uC5C4\uCCAD\uB09C
+        \uB300\uBB38\uD638\uAC00 \uB420 \uC7AC\uB2A5\uC744 \uAC16\uACE0 \uC788\uB2F5\uB2C8\uB2E4."
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uC81C\uAC00\uC694?"
+        result: 2
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uC815\uB9D0\uC694?"
+        result: 2
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    - idx: 2
+      dialogs:
+      - "\uC170\uC775\uC2A4\uD53C\uC5B4\uC528\uB294 \uC0AC\uC2E4 \uC5C4\uCCAD\uB09C
+        \uB300\uBB38\uD638\uAC00 \uB420 \uC7AC\uB2A5\uC744 \uAC16\uACE0 \uC788\uB2F5\uB2C8\uB2E4."
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uAD00\uB9AC\uC694?"
+        result: 3
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uAD00\uB9AC\uB77C\uB2C8, \uADF8\uAC8C \uBB50\uC8E0?"
+        result: 3
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    - idx: 3
+      dialogs:
+      - "\uB124! \uAD00\uB9AC\uC694. \uC791\uAC00\uAC00 \uB418\uAE30 \uC704\uD574\uC11C\uB294
+        \uB9D0\uC774\uC8E0\u2026 \uC800 \uC704\uC758 4\uAC00\uC9C0 \uADF8\uB9BC \uBCF4\uC774\uC2DC\uC8E0?"
+      - "\uC800\uAC8C \uAC01\uAC01 \uB3C8, \uC815\uC2E0, \uD544\uB825, \uAC74\uAC15\uC744
+        \uB098\uD0C0\uB0B4\uB294 \uAC70 \uAC70\uB4E0\uC694."
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uB124, \uBCF4\uC5EC\uC694"
+        result: 4
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uB124, \uADF8\uB798\uC11C\uC694?"
+        result: 4
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    - idx: 4
+      dialogs:
+      - "\uC800 4\uAC00\uC9C0 \uC218\uCE58\uB97C \uC798 \uC720\uC9C0\uC2DC\uCF1C\uC57C
+        \uD574\uC694. \uC548 \uADF8\uB7EC\uBA74 \uD070\uC77C\uC774 \uB0A0 \uAC70\uC5D0\uC694!"
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uD070\uC77C\uC774\uC694?"
+        result: 0
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uBB34\uC2A8 \uC77C\uC778\uB370\uC694?"
+        result: 0
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    endNode:
+      idx: 0
+      dialogs:
+      - "\uC544\uBB34\uD2BC \uD070 \uC77C\uC774\uC5D0\uC694! \uADF8\uB0E5 \uADF8\uB807\uAC8C
+        \uC544\uC138\uC694. \uAD81\uAE08\uD558\uBA74 \uD574\uBCF4\uC2DC\uB4E0\uAC00\uC694.
+        \uC5B4\uCA0C\uB4E0 \uC804 \uB2E4 \uB9D0\uC500 \uB4DC\uB838\uC5B4\uC694! \uAC00\uB054
+        \uCC3E\uC544 \uBD50\uAC8C\uC694. \uB2E4\uC74C\uC5D0 \uBD2C\uC694!"
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 1
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uC544\uC557\u2026"
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 1
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uAC00\uBC84\uB838\uB124\u2026"
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    pageCnt: 4

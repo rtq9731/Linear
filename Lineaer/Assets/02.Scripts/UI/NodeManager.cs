@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,16 +36,21 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public void SetLayout()
     {
-        NodeInfo nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
-        if (curSelectNum >= 5)
+        NodeInfo nodeInfo = null;
+        if (curSelectNum >= data.chapters[curChapter].pageCnt)
         {
             nodeInfo = data.chapters[curChapter].endNode;
+        }
+        else
+        {
+            nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
         }
 
         for (int i = 0; i < selectBtns.Length; i++)
         {
             selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
             selectBtns[i].GetComponent<RectTransform>().anchoredPosition += Vector2.right * 2000; // 위치도 오른쪽으로 숨김
+            selectBtns[i].interactable = false; // 버튼 상호작용 없애기
             selectBtns[i].gameObject.SetActive(false); // 버튼 끄기
         }
 
@@ -68,6 +74,7 @@ public class NodeManager : MonoSingleton<NodeManager>
                 {
                     curChapter = selects[y].result;
                     curSelectNum = 0;
+                    data.chapters[curChapter].Shuffle();
                     SetLayout();
                 }); // 만약 분기 이벤트라면 몇번 챕터로 가는지 체크
             }
@@ -96,9 +103,11 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selects.Length; i++)
         {
             selectBtns[i].gameObject.SetActive(true);
+            int y = i;
             seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPos(btnOriginPos[i], 0.5f).SetEase(Ease.InOutBack));
             seq.AppendInterval(0.125f);
         }
+        seq.OnComplete(() => selectBtns.ToList().ForEach(item => item.interactable = true));
         seq.Play();
     }
 }
