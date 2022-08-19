@@ -36,10 +36,18 @@ public class NodeManager : MonoSingleton<NodeManager>
     public void SetLayout()
     {
         NodeInfo nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
-        if(curSelectNum >= 5)
+        if (curSelectNum >= 5)
         {
             nodeInfo = data.chapters[curChapter].endNode;
         }
+
+        for (int i = 0; i < selectBtns.Length; i++)
+        {
+            selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
+            selectBtns[i].GetComponent<RectTransform>().anchoredPosition += Vector2.right * 2000; // 위치도 오른쪽으로 숨김
+            selectBtns[i].gameObject.SetActive(false); // 버튼 끄기
+        }
+
         dialogPanel.SetDialog(nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
     }
 
@@ -51,13 +59,6 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public void SetBtns(SelectInfo[] selects)
     {
-        for (int i = 0; i < selectBtns.Length; i++)
-        {
-            selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
-            selectBtns[i].GetComponent<RectTransform>().anchoredPosition += Vector2.right * 2000; // 위치도 오른쪽으로 숨김
-            selectBtns[i].gameObject.SetActive(false); // 버튼 끄기
-        }
-
         for (int i = 0; i < selects.Length; i++)
         {
             int y = i;
@@ -87,13 +88,15 @@ public class NodeManager : MonoSingleton<NodeManager>
                 }); // 만약 분기 이벤트가 아니라면 다음 선택지로 그냥 넘어가게
             }
 
+            selectBtns[selects[i].idx].GetComponentInChildren<Text>().text = selects[i].selectInfo;
+
         }
 
         Sequence seq = DOTween.Sequence();
         for (int i = 0; i < selects.Length; i++)
         {
             selectBtns[i].gameObject.SetActive(true);
-            seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPos(btnOriginPos[i], 1f).SetEase(Ease.InOutBack));
+            seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPos(btnOriginPos[i], 0.5f).SetEase(Ease.InOutBack));
             seq.AppendInterval(0.125f);
         }
         seq.Play();

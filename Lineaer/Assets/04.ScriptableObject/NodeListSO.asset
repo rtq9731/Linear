@@ -19,7 +19,7 @@ MonoBehaviour:
       - "\uC548\uB155\uD558\uC138\uC694!"
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
         selectInfo: "\uC548\uB155\uD558\uC138\uC694, \uADF8\uB7F0\uB370 \uB204\uAD6C\uC138\uC694?"
@@ -29,7 +29,7 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 1
         selectInfo: "\uCC98\uC74C \uBCF4\uB294 \uBD84\uC778 \uAC70 \uAC19\uC740\uB370,
@@ -47,7 +47,7 @@ MonoBehaviour:
         \uB300\uBB38\uD638\uAC00 \uB420 \uC7AC\uB2A5\uC744 \uAC16\uACE0 \uC788\uB2F5\uB2C8\uB2E4."
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
         selectInfo: "\uC81C\uAC00\uC694?"
@@ -57,7 +57,7 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 1
         selectInfo: "\uC815\uB9D0\uC694?"
@@ -73,7 +73,7 @@ MonoBehaviour:
         \uB300\uBB38\uD638\uAC00 \uB420 \uC7AC\uB2A5\uC744 \uAC16\uACE0 \uC788\uB2F5\uB2C8\uB2E4."
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
         selectInfo: "\uAD00\uB9AC\uC694?"
@@ -83,7 +83,7 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 1
         selectInfo: "\uAD00\uB9AC\uB77C\uB2C8, \uADF8\uAC8C \uBB50\uC8E0?"
@@ -101,7 +101,7 @@ MonoBehaviour:
         \uB098\uD0C0\uB0B4\uB294 \uAC70 \uAC70\uB4E0\uC694."
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
         selectInfo: "\uB124, \uBCF4\uC5EC\uC694"
@@ -111,7 +111,7 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 1
         selectInfo: "\uB124, \uADF8\uB798\uC11C\uC694?"
@@ -128,7 +128,7 @@ MonoBehaviour:
       talkerSprite: {fileID: 0}
       selects:
       - isChapterSelect: 0
-        isEndSelect: 1
+        isEndSelect: 0
         idx: 0
         selectInfo: "\uD070\uC77C\uC774\uC694?"
         result: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
           plusWriting: 0
           plusHealth: 0
       - isChapterSelect: 0
-        isEndSelect: 1
+        isEndSelect: 0
         idx: 1
         selectInfo: "\uBB34\uC2A8 \uC77C\uC778\uB370\uC694?"
         result: 0
@@ -156,21 +156,21 @@ MonoBehaviour:
         \uCC3E\uC544 \uBD50\uAC8C\uC694. \uB2E4\uC74C\uC5D0 \uBD2C\uC694!"
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 0
+      - isChapterSelect: 1
         isEndSelect: 0
         idx: 0
         selectInfo: "\uC544\uC557\u2026"
-        result: 0
+        result: 1
         resultInfo:
           plusMoney: 0
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
-      - isChapterSelect: 0
+      - isChapterSelect: 1
         isEndSelect: 0
         idx: 0
         selectInfo: "\uAC00\uBC84\uB838\uB124\u2026"
-        result: 0
+        result: 1
         resultInfo:
           plusMoney: 0
           plusMental: 0

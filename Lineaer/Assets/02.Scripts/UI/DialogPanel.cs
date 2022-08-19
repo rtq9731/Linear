@@ -22,17 +22,18 @@ public class DialogPanel : MonoBehaviour
 
     private IEnumerator Dialog(System.Action onComplete)
     {
-        while (dialogs.Length < dialogNum)
+        while (dialogs.Length > dialogNum)
         {
-            Tween tween = textDialog.DOText(dialogs[dialogNum], dialogs[dialogNum].Length * 0.25f);
-            yield return new WaitUntil(tween.IsComplete);
+            textDialog.text = "";
+            Tween tween = textDialog.DOText(dialogs[dialogNum], dialogs[dialogNum].Length * 0.1f).SetEase(Ease.Linear);
+            yield return new WaitForSeconds(dialogs[dialogNum].Length * 0.1f);
             imageDialogComplete.gameObject.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             imageDialogComplete.gameObject.SetActive(false);
             dialogNum++;
         }
 
-        onComplete.Invoke();
+        onComplete?.Invoke();
         dialogNum = 0;
     }
 }
