@@ -255,7 +255,7 @@ MonoBehaviour:
         isEndSelect: 0
         idx: 1
         selectInfo: "\uB9D0\uB3C4 \uC548 \uB418\uB294 \uC18C\uB9AC."
-        result: 2
+        result: 3
         resultInfo:
           plusMoney: 0
           plusMental: -10
@@ -294,21 +294,21 @@ MonoBehaviour:
       - "\uC624\uB79C\uB9CC\uC774\uC5D0\uC694! \uAE00\uC740 \uC798 \uC4F0\uACE0 \uC788\uB098\uC694?"
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
         selectInfo: "\uADF8\uB7FC\uC694. \uC694\uC998\uC740 \uC9D1\uD544\uD558\uB290\uB77C
-          \uC815\uC2E0\uC774 \uC5C6\uB124\uC694. (\uD544\uB825 +10)"
+          \uC815\uC2E0\uC774 \uC5C6\uB124\uC694."
         result: 1
         resultInfo:
           plusMoney: 0
           plusMental: 0
           plusWriting: 10
           plusHealth: 0
-      - isChapterSelect: 1
+      - isChapterSelect: 0
         isEndSelect: 0
         idx: 0
-        selectInfo: "\uC5B4\u2026 \uB124.. \u314E\u314E(\uD544\uB825 -10)"
+        selectInfo: "\uC5B4\u2026 \uB124.. \u314E\u314E"
         result: 1
         resultInfo:
           plusMoney: 0
