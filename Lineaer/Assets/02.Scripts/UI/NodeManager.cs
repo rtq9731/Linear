@@ -27,6 +27,7 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selectBtns.Length; i++)
         {
             btnOriginPos[i] = selectBtns[i].GetComponent<RectTransform>().anchoredPosition;
+            Debug.Log(btnOriginPos[i]);
             selectBtns[i].gameObject.SetActive(false);
         }
         SetLayout();
@@ -53,17 +54,18 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selectBtns.Length; i++)
         {
             selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
-            selectBtns[i].GetComponent<RectTransform>().anchoredPosition = Vector2.right * 2000; // 위치도 오른쪽으로 숨김
-            selectBtns[i].gameObject.SetActive(false);
+            selectBtns[i].GetComponent<RectTransform>().anchoredPosition += Vector2.right * 2000; // 위치도 오른쪽으로 숨김
+            selectBtns[i].gameObject.SetActive(false); // 버튼 끄기
         }
 
         for (int i = 0; i < selects.Length; i++)
         {
+            int y = i;
             if (selects[i].isChapterSelect)
             {
                 selectBtns[selects[i].idx].onClick.AddListener(() => 
                 {
-                    curChapter = selects[i].result;
+                    curChapter = selects[y].result;
                     curSelectNum = 0;
                     SetLayout();
                 }); // 만약 분기 이벤트라면 몇번 챕터로 가는지 체크
@@ -72,7 +74,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             {
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
-                    SetEndLayout(selects[i].result);
+                    SetEndLayout(selects[y].result);
                 }); // 만약 엔딩 이벤트라면 엔딩 화면 불러오기
             }
             else
@@ -91,7 +93,7 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selects.Length; i++)
         {
             selectBtns[i].gameObject.SetActive(true);
-            seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPosX(btnOriginPos[i].x, 1f).SetEase(Ease.InOutBack));
+            seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPos(btnOriginPos[i], 1f).SetEase(Ease.InOutBack));
             seq.AppendInterval(0.125f);
         }
         seq.Play();
