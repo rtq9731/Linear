@@ -179,39 +179,11 @@ MonoBehaviour:
           plusHealth: 0
     pageCnt: 5
   - nodes:
-    - idx: 1
-      dialogs:
-      - "\uB2F9\uC2E0\uC740 \uB2E4\uB978 \uC0AC\uB78C\uC774 \uC4F4 \uAE00\uC744 \uC77D\uB358
-        \uB3C4\uC911 \uC601\uAC10\uC774 \uB5A0\uC62C\uB790\uC2B5\uB2C8\uB2E4. \uB2F9\uC2E0\uC774
-        \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
-      talkerSprite: {fileID: 0}
-      selects:
-      - isChapterSelect: 0
-        isEndSelect: 0
-        idx: 0
-        selectInfo: "\uB300\uC911\uC801\uC774\uACE0 \uC0C1\uC5C5\uC801\uC778 \uC18C\uC124"
-        result: 2
-        resultInfo:
-          plusMoney: 20
-          plusMental: 0
-          plusWriting: -10
-          plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 0
-        idx: 1
-        selectInfo: "\uB09C\uD574\uD558\uACE0 \uAE4A\uC740 \uB0B4\uC6A9\uC744 \uB2E4\uB8EC
-          \uC2DC"
-        result: 2
-        resultInfo:
-          plusMoney: -20
-          plusMental: 0
-          plusWriting: 10
-          plusHealth: 0
     - idx: 2
       dialogs:
       - "\uC170\uC775\uC2A4\uD53C\uC5B4! \uB124 \uBA4D\uCCAD\uD55C \uAE00\uC740 \uC798
         \uBCF4\uC558\uB2E4. \uADF8 \uBC14\uBCF4 \uAC19\uC740 \uB2E8\uC5B4 \uC120\uD0DD\uC740
-        \uC880 \uACE0\uCE58\uB294 \uAC8C \uC5B4\uB5BB\uACA0\uB098?"
+        \uC880 \uACE0\uCE58\uB294 \uAC8C\n\uC5B4\uB5BB\uACA0\uB098?"
       talkerSprite: {fileID: 0}
       selects:
       - isChapterSelect: 0
@@ -287,6 +259,34 @@ MonoBehaviour:
           plusMoney: 10
           plusMental: 0
           plusWriting: 0
+          plusHealth: 0
+    - idx: 1
+      dialogs:
+      - "\uB2F9\uC2E0\uC740 \uB2E4\uB978 \uC0AC\uB78C\uC774 \uC4F4 \uAE00\uC744 \uC77D\uB358
+        \uB3C4\uC911 \uC601\uAC10\uC774 \uB5A0\uC62C\uB790\uC2B5\uB2C8\uB2E4. \uB2F9\uC2E0\uC774
+        \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
+      talkerSprite: {fileID: 0}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 0
+        selectInfo: "\uB300\uC911\uC801\uC774\uACE0 \uC0C1\uC5C5\uC801\uC778 \uC18C\uC124"
+        result: 2
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: -10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        idx: 1
+        selectInfo: "\uB09C\uD574\uD558\uACE0 \uAE4A\uC740 \uB0B4\uC6A9\uC744 \uB2E4\uB8EC
+          \uC2DC"
+        result: 2
+        resultInfo:
+          plusMoney: -20
+          plusMental: 0
+          plusWriting: 10
           plusHealth: 0
     endNode:
       idx: 0
