@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3844276794998869663}
   - component: {fileID: 3844276794998869662}
   m_Layer: 5
-  m_Name: State1
+  m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3844276795091293756}
   - component: {fileID: 3844276795091293759}
   m_Layer: 5
-  m_Name: State2
+  m_Name: Mental
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 3844276795247039860}
   - component: {fileID: 3844276795247039863}
   m_Layer: 5
-  m_Name: State3
+  m_Name: Effort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 3844276795348409057}
   - component: {fileID: 3844276795348409056}
   m_Layer: 5
-  m_Name: State4
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 3844276796317987420}
   - component: {fileID: 3844276796317987418}
   - component: {fileID: 3844276796317987421}
+  - component: {fileID: 2780408542210975241}
   m_Layer: 5
   m_Name: StateIconGroup
   m_TagString: Untagged
@@ -375,6 +376,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3844276796317987423}
   m_CullTransparentMesh: 1
+--- !u!114 &2780408542210975241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844276796317987423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe3b8bd0795f6a4b9429e19d4e304bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stateImages:
+  - {fileID: 3844276794998869662}
+  - {fileID: 3844276795091293759}
+  - {fileID: 3844276795247039863}
+  - {fileID: 3844276795348409056}
 --- !u!1 &3844276796488506534
 GameObject:
   m_ObjectHideFlags: 0
