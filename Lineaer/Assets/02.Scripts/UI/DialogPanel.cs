@@ -7,12 +7,13 @@ using DG.Tweening;
 public class DialogPanel : MonoBehaviour
 {
     [SerializeField] Text textDialog;
+    [SerializeField] Image imageDialogComplete = null;
 
     string[] dialogs = null;
 
     int dialogNum = 0;
 
-    public void SetDialog(string[] dialogs)
+    public void SetDialog(string[] dialogs, System.Action onComplete)
     {
         this.dialogs = dialogs;
         dialogNum = 0;
@@ -25,8 +26,9 @@ public class DialogPanel : MonoBehaviour
         {
             Tween tween = textDialog.DOText(dialogs[dialogNum], dialogs[dialogNum].Length * 0.25f);
             yield return new WaitUntil(tween.IsComplete);
-
+            imageDialogComplete.gameObject.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            imageDialogComplete.gameObject.SetActive(false);
             dialogNum++;
         }
     }

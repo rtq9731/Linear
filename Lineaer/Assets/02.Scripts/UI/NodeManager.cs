@@ -4,13 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class NodeManager : MonoBehaviour
+public class NodeManager : MonoSingleton<NodeManager>
 {
-    public static NodeManager Instance => _instance;
-    private static NodeManager _instance = null;
-
-    readonly int chapterPage = 5;
-
     [SerializeField] ChapterListSO data = null;
     [SerializeField] DialogPanel dialogPanel = null;
 
@@ -22,29 +17,25 @@ public class NodeManager : MonoBehaviour
 
     [SerializeField] RectTransform mainLayout = null;
 
+    [SerializeField] Vector2[] originBtns = new Vector2[3];
+
     int curChapter = 0;
     int curSelectNum = 0;
 
-    private void Awake()
+    private void Start()
     {
-        if (_instance != null)
+        for (int i = 0; i < selectBtns.Length; i++)
         {
-            Destroy(_instance);
+            originBtns[i] = selectBtns[i].GetComponent<RectTransform>().anchoredPosition;
+            selectBtns[i].gameObject.SetActive(false);
         }
-        _instance = this;
-    }
-
-    public void SetLayout(NodeInfo nodeInfo)
-    {
-        SetBtns(nodeInfo.selects);
-        dialogPanel.SetDialog(nodeInfo.dialogs);
+        SetLayout();
     }
 
     public void SetLayout()
     {
-        NodeInfo nodeInfo = data.chapters[chapterPage].nodes[curSelectNum];
-
-        SetBtns(nodeInfo.selects);
+        NodeInfo nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
+        dialogPanel.SetDialog(nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
     }
 
     public void SetEndLayout(int endNum)

@@ -16,6 +16,7 @@ public class ChapterInfo
     {
         System.Random rng = new System.Random();
         var shufflednodes = nodes.OrderBy(a => rng.Next()).ToList();
+        nodes = shufflednodes;
     }
 }
 
