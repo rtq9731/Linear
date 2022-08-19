@@ -10,6 +10,9 @@ public class StateController : MonoSingleton<StateController>
     [SerializeField]
     private Image[] _stateImages;
 
+    private const float MAX_VALUE = 100f;
+    private const float MIN_VALUE = 0f;
+
     private void Awake()
     {
         stateValues = new float[(int)StateType.COUNT];
@@ -23,7 +26,8 @@ public class StateController : MonoSingleton<StateController>
     /// <param name="value"></param>
     public void SetStateValue(StateType stateType, float value)
     {
-        _stateImages[(int)stateType].fillAmount = value;
+        stateValues[(int)stateType] = value;
+        _stateImages[(int)stateType].fillAmount = stateValues[(int)stateType] / 100f;
     }
 
     /// <summary>
@@ -34,6 +38,7 @@ public class StateController : MonoSingleton<StateController>
     public void AddStateValue(StateType stateType, float value)
     {
         stateValues[(int)stateType] += value;
+        _stateImages[(int)stateType].fillAmount = stateValues[(int)stateType] / 100f;
     }
 
     /// <summary>
