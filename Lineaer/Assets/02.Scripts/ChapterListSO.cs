@@ -1,12 +1,24 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObject/NodeList", fileName = "NodeListSO")]
-public class NodeListSO : ScriptableObject
+public class ChapterListSO : ScriptableObject
 {
-    public List<NodeInfo> nodes = null;
+    public List<ChapterInfo> chapters = null;
 }
+
+public class ChapterInfo
+{
+    public List<NodeInfo> nodes = new List<NodeInfo>(5); // 챕터 페이지 수
+    public void Shuffle()
+    {
+        System.Random rng = new System.Random();
+        var shufflednodes = nodes.OrderBy(a => rng.Next()).ToList();
+    }
+}
+
 
 [System.Serializable]
 public class NodeInfo

@@ -11,7 +11,7 @@ public class NodeManager : MonoBehaviour
 
     readonly int chapterPage = 5;
 
-    [SerializeField] NodeListSO data = null;
+    [SerializeField] ChapterListSO data = null;
     [SerializeField] DialogPanel dialogPanel = null;
 
     [SerializeField] Text textdialog = null;
@@ -42,8 +42,7 @@ public class NodeManager : MonoBehaviour
 
     public void SetLayout()
     {
-        NodeInfo nodeInfo = data.nodes[chapterPage * curChapter + curSelectNum];
-
+        NodeInfo nodeInfo = data.chapters[chapterPage].nodes[curSelectNum];
 
         SetBtns(nodeInfo.selects);
     }

@@ -10,8 +10,24 @@ public class DialogPanel : MonoBehaviour
 
     string[] dialogs = null;
 
+    int dialogNum = 0;
+
     public void SetDialog(string[] dialogs)
     {
         this.dialogs = dialogs;
+        dialogNum = 0;
+        StartCoroutine(Dialog());
+    }
+
+    private IEnumerator Dialog()
+    {
+        while (dialogs.Length < dialogNum)
+        {
+            Tween tween = textDialog.DOText(dialogs[dialogNum], dialogs[dialogNum].Length * 0.25f);
+            yield return new WaitUntil(tween.IsComplete);
+
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            dialogNum++;
+        }
     }
 }
