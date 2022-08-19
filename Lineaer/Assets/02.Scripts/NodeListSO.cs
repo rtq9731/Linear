@@ -13,14 +13,17 @@ public class NodeInfo
 {
     public int idx = 0;
     public string[] dialogs = null;
+    public Sprite talkerSprite = null;
     public SelectInfo[] selects = null;
 }
 
 [System.Serializable]
 public class SelectInfo
 {
+    public bool isChapterSelect = false;
+    public bool isEndSelect = false;
     public int idx = 0;
     public string selectInfo;
-    public int resultIdx = 0;
+    public int result = 0;
 }
 
