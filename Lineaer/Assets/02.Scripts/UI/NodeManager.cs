@@ -17,7 +17,7 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     [SerializeField] RectTransform mainLayout = null;
 
-    [SerializeField] Vector2[] originBtns = new Vector2[3];
+    Vector2[] btnOriginPos = new Vector2[3];
 
     int curChapter = 0;
     int curSelectNum = 0;
@@ -26,7 +26,7 @@ public class NodeManager : MonoSingleton<NodeManager>
     {
         for (int i = 0; i < selectBtns.Length; i++)
         {
-            originBtns[i] = selectBtns[i].GetComponent<RectTransform>().anchoredPosition;
+            btnOriginPos[i] = selectBtns[i].GetComponent<RectTransform>().anchoredPosition;
             selectBtns[i].gameObject.SetActive(false);
         }
         SetLayout();
@@ -53,6 +53,8 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selectBtns.Length; i++)
         {
             selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
+            selectBtns[i].GetComponent<RectTransform>().anchoredPosition = Vector2.right * 2000; // 위치도 오른쪽으로 숨김
+            selectBtns[i].gameObject.SetActive(false);
         }
 
         for (int i = 0; i < selects.Length; i++)
@@ -82,6 +84,14 @@ public class NodeManager : MonoSingleton<NodeManager>
                     SetLayout();
                 }); // 만약 분기 이벤트가 아니라면 다음 선택지로 그냥 넘어가게
             }
+
+        }
+
+        Sequence seq = DOTween.Sequence();
+        for (int i = 0; i < selects.Length; i++)
+        {
+            seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPosX(btnOriginPos[i].x, 1f).SetEase(Ease.InOutBack));
+            seq.AppendInterval(0.125f);
         }
     }
 }
