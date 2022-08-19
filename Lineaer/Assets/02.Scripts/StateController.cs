@@ -16,7 +16,14 @@ public class StateController : MonoSingleton<StateController>
     private void Awake()
     {
         stateValues = new float[(int)StateType.COUNT];
-        _stateImages = new Image[(int)StateType.COUNT];
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < stateValues.Length; i++)
+        {
+            SetStateValue((StateType)i, 50.0f);
+        }
     }
 
     /// <summary>
