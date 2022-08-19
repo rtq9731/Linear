@@ -294,7 +294,7 @@ MonoBehaviour:
       - "\uC624\uB79C\uB9CC\uC774\uC5D0\uC694! \uAE00\uC740 \uC798 \uC4F0\uACE0 \uC788\uB098\uC694?"
       talkerSprite: {fileID: 0}
       selects:
-      - isChapterSelect: 0
+      - isChapterSelect: 1
         isEndSelect: 0
         idx: 0
         selectInfo: "\uADF8\uB7FC\uC694. \uC694\uC998\uC740 \uC9D1\uD544\uD558\uB290\uB77C
@@ -305,7 +305,7 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 10
           plusHealth: 0
-      - isChapterSelect: 0
+      - isChapterSelect: 1
         isEndSelect: 0
         idx: 1
         selectInfo: "\uC5B4\u2026 \uB124.. \u314E\u314E"
