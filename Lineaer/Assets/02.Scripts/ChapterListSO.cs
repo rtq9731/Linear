@@ -28,7 +28,7 @@ public class ChapterInfo
 public class NodeInfo
 {
     public int idx = 0;
-    public string[] dialogs = null;
+    [TextArea] public string[] dialogs = null;
     public Sprite talkerSprite = null;
     public SelectInfo[] selects = null;
 }
