@@ -28,6 +28,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC548\uB155\uD558\uC138\uC694, \uADF8\uB7F0\uB370 \uB204\uAD6C\uC138\uC694?"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 100
@@ -40,6 +41,7 @@ MonoBehaviour:
         idx: 1
         selectInfo: "\uCC98\uC74C \uBCF4\uB294 \uBD84\uC778 \uAC70 \uAC19\uC740\uB370,
           \uB204\uAD6C\uC138\uC694?"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 0
@@ -63,6 +65,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC81C\uAC00\uC694?"
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: 0
@@ -74,6 +77,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uC815\uB9D0\uC694?"
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: 0
@@ -95,6 +99,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uAD00\uB9AC\uC694?"
+        selectInfoUpper: 
         result: 3
         resultInfo:
           plusMoney: 0
@@ -106,6 +111,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uAD00\uB9AC\uB77C\uB2C8, \uADF8\uAC8C \uBB50\uC8E0?"
+        selectInfoUpper: 
         result: 3
         resultInfo:
           plusMoney: 0
@@ -130,6 +136,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB124, \uBCF4\uC5EC\uC694"
+        selectInfoUpper: 
         result: 4
         resultInfo:
           plusMoney: 0
@@ -141,6 +148,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uB124, \uADF8\uB798\uC11C\uC694?"
+        selectInfoUpper: 
         result: 4
         resultInfo:
           plusMoney: 0
@@ -161,6 +169,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uD070\uC77C\uC774\uC694?"
+        selectInfoUpper: 
         result: 0
         resultInfo:
           plusMoney: 0
@@ -172,6 +181,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uBB34\uC2A8 \uC77C\uC778\uB370\uC694?"
+        selectInfoUpper: 
         result: 0
         resultInfo:
           plusMoney: 0
@@ -195,6 +205,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC544\uC557\u2026"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 0
@@ -206,6 +217,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uAC00\uBC84\uB838\uB124\u2026"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 0
@@ -230,6 +242,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB300\uC911\uC801\uC774\uACE0 \uC0C1\uC5C5\uC801\uC778 \uC18C\uC124"
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: 20
@@ -242,6 +255,7 @@ MonoBehaviour:
         idx: 1
         selectInfo: "\uB09C\uD574\uD558\uACE0 \uAE4A\uC740 \uB0B4\uC6A9\uC744 \uB2E4\uB8EC
           \uC2DC"
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: -20
@@ -262,6 +276,7 @@ MonoBehaviour:
         idx: 0
         selectInfo: "\uADF8\uB7FC\uC694. \uC694\uC998\uC740 \uC9D1\uD544\uD558\uB290\uB77C
           \uC815\uC2E0\uC774 \uC5C6\uB124\uC694."
+        selectInfoUpper: 
         result: 0
         resultInfo:
           plusMoney: 0
@@ -273,6 +288,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uC5B4\u2026 \uB124.. \u314E\u314E"
+        selectInfoUpper: 
         result: 0
         resultInfo:
           plusMoney: 0
@@ -294,6 +310,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC544, \uB135 \uC798 \uBA39\uC744\uAC8C\uC694"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: -10
@@ -305,6 +322,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uC544\uB1E8, \uAD1C\uCC2E\uC744 \uAC70 \uAC19\uB124\uC694 \u314E\u314E"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 10
@@ -326,6 +344,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB2E8\uC5B4.. \uC120\uD0DD..? \uD760\u2026"
+        selectInfoUpper: 
         result: 3
         resultInfo:
           plusMoney: 0
@@ -337,6 +356,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uB9D0\uB3C4 \uC548 \uB418\uB294 \uC18C\uB9AC."
+        selectInfoUpper: 
         result: 3
         resultInfo:
           plusMoney: 0
@@ -357,6 +377,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uADF8\uB7EC\uC8E0. \uAC19\uC774 \uACE8\uB77C\uB4DC\uB9B4\uAE4C\uC694?"
+        selectInfoUpper: 
         result: 0
         resultInfo:
           plusMoney: 0
@@ -369,6 +390,7 @@ MonoBehaviour:
         idx: 1
         selectInfo: "\uC624\uB298\uC740 \uC800\uC640\uC758 \uC57D\uC18D\uC774 \uC788\uC5B4\uC11C
           \uD798\uB4E4 \uAC70 \uAC19\uB124\uC694"
+        selectInfoUpper: 
         result: 0
         resultInfo:
           plusMoney: 0
@@ -392,6 +414,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB135, \uC54C\uACA0\uC2B5\uB2C8\uB2E4."
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: 20
@@ -404,6 +427,7 @@ MonoBehaviour:
         idx: 1
         selectInfo: "\uBB54 \uB9D0\uB3C4 \uC548 \uB418\uB294 \uC18C\uB9AC\uC5D0\uC694?
           \uC81C\uB300\uB85C \uBD80\uD0C1\uD558\uC138\uC694."
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: 0
@@ -431,6 +455,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uBB3C\uB860\uC774\uC9C0! \uD558\uB098 \uBCF4\uC5EC\uC904\uAE4C?"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 0
@@ -440,8 +465,9 @@ MonoBehaviour:
       - isChapterSelect: 0
         isEndSelect: 0
         isRestartSelect: 0
-        idx: 0
+        idx: 1
         selectInfo: "\uC544\uB2C8, \uCD5C\uADFC\uC5D0\uB294 \uC548 \uC4F0\uACE0 \uC788\uC5B4."
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 0
@@ -463,6 +489,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB124 \uC77D\uC5B4\uBD24\uC5B4\uC694 \uC774\uBBF8"
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: 0
@@ -472,8 +499,9 @@ MonoBehaviour:
       - isChapterSelect: 0
         isEndSelect: 0
         isRestartSelect: 0
-        idx: 0
+        idx: 1
         selectInfo: "\uC544\uB1E8, \uD558\uB098 \uC8FC\uC138\uC694"
+        selectInfoUpper: 
         result: 2
         resultInfo:
           plusMoney: -20
@@ -495,6 +523,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uAC10\uC0AC\uD569\uB2C8\uB2E4"
+        selectInfoUpper: 
         result: 3
         resultInfo:
           plusMoney: 10
@@ -506,6 +535,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uACE0\uB9D9\uC2B5\uB2C8\uB2E4"
+        selectInfoUpper: 
         result: 3
         resultInfo:
           plusMoney: 10
@@ -539,6 +569,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uBB3C\uB860\uC774\uC8E0, \uB9E1\uACA8\uB9CC \uC8FC\uC138\uC694"
+        selectInfoUpper: 
         result: 4
         resultInfo:
           plusMoney: 20
@@ -550,6 +581,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC74C.. \uC9C0\uAE08\uC740 \uC870\uAE08 \uD798\uB4E0\uB370\uC694"
+        selectInfoUpper: 
         result: 4
         resultInfo:
           plusMoney: 0
@@ -574,6 +606,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uD070 \uC6D0\uC744 \uADF8\uB9AC\uB2E4"
+        selectInfoUpper: 
         result: 5
         resultInfo:
           plusMoney: 0
@@ -585,6 +618,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uC6D0\uC810\uC73C\uB85C \uB3CC\uC544\uC624\uB2E4"
+        selectInfoUpper: 
         result: 5
         resultInfo:
           plusMoney: 0
@@ -596,6 +630,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 2
         selectInfo: "\uADF8\uAC8C.. \uADF8\uB7EC\uB2C8\uAE4C\u2026"
+        selectInfoUpper: 
         result: 5
         resultInfo:
           plusMoney: 0
@@ -617,6 +652,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC54C\uC558\uC5B4\uC694"
+        selectInfoUpper: 
         result: 6
         resultInfo:
           plusMoney: 0
@@ -628,6 +664,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uC774\uD574\uD588\uC5B4\uC694"
+        selectInfoUpper: 
         result: 6
         resultInfo:
           plusMoney: 0
@@ -639,6 +676,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 2
         selectInfo: "\uACE0\uB9C8\uC6CC\uC694"
+        selectInfoUpper: 
         result: 6
         resultInfo:
           plusMoney: 0
@@ -664,6 +702,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB0B4 \uC0AC\uB791\uB9CC\uC740 \uC758\uC2EC\uD558\uC9C0 \uB9C8\uC2DC\uC624."
+        selectInfoUpper: But never doubt I love
         result: 7
         resultInfo:
           plusMoney: 0
@@ -676,6 +715,7 @@ MonoBehaviour:
         idx: 1
         selectInfo: "\uB098\uC758 \uB9C8\uC74C\uB9CC\uC740 \uC758\uC2EC\uD558\uC9C0
           \uB9C8\uC2DC\uC624"
+        selectInfoUpper: But never doubt my mind
         result: 7
         resultInfo:
           plusMoney: 0
@@ -697,6 +737,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uB9CC\uC138! \uC55E\uB0A0\uC758 \uC655\uC774\uC2DC\uC5EC!"
+        selectInfoUpper: 
         result: 8
         resultInfo:
           plusMoney: 0
@@ -708,6 +749,7 @@ MonoBehaviour:
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uC774\uC81C \uB0B4 \uADF8\uB300\uB4E4\uC744 \uCC98\uB2E8\uD558\uACA0\uB178\uB77C! "
+        selectInfoUpper: 
         result: 8
         resultInfo:
           plusMoney: 0
@@ -716,19 +758,111 @@ MonoBehaviour:
           plusHealth: 0
     endNode:
       idx: 0
-      dialogs: []
+      dialogs:
+      - "\u2026 \uC170\uC775\uC2A4\uD53C\uC5B4 \uADF8\uB300\uAC00 \uB9AC\uB9CC \uB0A8\uC791\uC758
+        \uC758\uB8B0\uB97C \uBC1B\uC558\uB2E4 \uB4E4\uC5C8\uB2E4"
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 21300000, guid: 82fef2b2e3198e1458b93cc5aa086d8c, type: 3}
+      selects:
+      - isChapterSelect: 1
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uB9AC\uB9CC \uB0A8\uC791?"
+        selectInfoUpper: 
+        result: 3
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 1
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 1
+        selectInfo: "\uADF8\uAC8C \uB204\uAD70\uB370\uC694?"
+        selectInfoUpper: 
+        result: 3
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    pageCnt: 8
+  - idx: 3
+    nodes: []
+    endNode:
+      idx: 0
+      dialogs:
+      - "\uB9AC.\uB9CC.\uB0A8.\uC791 \uB9D0\uC774\uB2E4! \uB9AC\uB9CC\uB0A8\uC791!
+        \uB2F9\uC2E0\uC5D0\uAC8C \uC11C\uC0AC\uC2DC\uB97C \uC758\uB8B0\uD55C \uB0A8\uC790!"
+      upperDialog:
+      - 
+      sprites:
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
+      selects:
+      - isChapterSelect: 1
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uC544~"
+        selectInfoUpper: 
+        result: 4
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 1
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 1
+        selectInfo: "\uADF8\uBD84 \uB9D0\uC500\uC774\uC2DC\uAD70\uC694."
+        selectInfoUpper: 
+        result: 4
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    pageCnt: 0
+  - idx: 4
+    nodes: []
+    endNode:
+      idx: 0
+      dialogs:
+      - "\uC73C\uC73C \u2026! \uC170\uC775\uC2A4\uD53C\uC5B4 \uB09C \uB124\uB188\uC774
+        \uC815\uB9D0 \uB9C8\uC74C\uC5D0 \uC548\uB4E0\uB2E4"
+      upperDialog:
+      - 
+      sprites:
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
       selects:
       - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 1
+        isEndSelect: 1
+        isRestartSelect: 0
         idx: 0
-        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
-        result: 1
+        selectInfo: "\uADF8\uB798\uC11C \uC774\uB7F0 \uACF3\uC73C\uB85C \uBD88\uB7EC\uB0B4\uC2E0
+          \uAC74\uAC00\uC694? (\uBD84\uAE30 2\uB85C)"
+        selectInfoUpper: 
+        result: 108
         resultInfo:
-          plusMoney: 20
+          plusMoney: 0
           plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 1
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uB2F9\uC2E0 \uB9D0 \uC18D\uC758 \uBD84\uB178\uB294 \uC774\uD574\uD558\uC9C0\uB9CC
+          \uBB34\uC2A8 \uB9D0\uC778\uC9C0\uB294 \uBAA8\uB974\uACA0\uC5B4\uC694."
+        selectInfoUpper: 
+        result: 5
+        resultInfo:
+          plusMoney: 0
+          plusMental: -20
           plusWriting: 10
           plusHealth: 0
     pageCnt: 0
@@ -758,6 +892,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -790,6 +925,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -821,6 +957,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -851,6 +988,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -888,6 +1026,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -918,6 +1057,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -962,6 +1102,7 @@ MonoBehaviour:
         isRestartSelect: 1
         idx: 0
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
         result: 1
         resultInfo:
           plusMoney: 20
@@ -969,3 +1110,72 @@ MonoBehaviour:
           plusWriting: 10
           plusHealth: 0
     pageCnt: 0
+  - idx: 108
+    nodes:
+    - idx: 0
+      dialogs:
+      - "\uADF8\uB798! \uBC14\uB85C \uC774\uB7EC\uAE30 \uC704\uD574\uC11C \uB9D0\uC774\uC57C!"
+      - "\uAC11\uC791\uC2A4\uB7FD\uAC8C \uB36E\uCCD0 \uB4E4\uC5B4\uC628 \uADF8. \uADF8\uC758
+        \uC190\uC5D0\uC11C \uB2F9\uC2E0\uC758 \uC120\uD608\uC774 \uD758\uB7EC\uB0B4\uB9BD\uB2C8\uB2E4."
+      upperDialog:
+      - 
+      - 
+      sprites:
+      - {fileID: 21300000, guid: 82fef2b2e3198e1458b93cc5aa086d8c, type: 3}
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 1
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uC73C\u2026 \uC73C\uC73D"
+        selectInfoUpper: 
+        result: 0
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 1
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uC544\uD30C\u2026"
+        selectInfoUpper: 
+        result: 0
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    endNode:
+      idx: 0
+      dialogs:
+      - "\uC624 \uC8FC\uC778\uC774\uC2DC\uC5EC \uC9C8\uD22C\uB97C \uC870\uC2EC\uD558\uC2DC\uC635\uC18C\uC11C"
+      - "\uC9C8\uD22C\uB294 \uC0AC\uB78C\uC758 \uB9C8\uC74C\uC744 \uB18D\uB77D\uD558\uBA70
+        \uBA39\uC774\uB85C \uC0BC\uB294"
+      - "\uB179\uC0C9 \uB208\uC744 \uD55C \uAD34\uBB3C\uC774\uB2C8\uAE4C\uC694."
+      - "\u2026\uC544\uC168\uC9C0\uC694?"
+      - "\uADF8\uB7FC, \uC548\uB155\uD788."
+      upperDialog:
+      - O, beware, my lord, of jealousy;
+      - "It is the green-ey\u2019d monster which doth mock"
+      - The meat it feeds on.
+      - 
+      - 
+      sprites:
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 0
+        selectInfo: ...
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    pageCnt: 1

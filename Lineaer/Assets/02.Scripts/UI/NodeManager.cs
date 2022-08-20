@@ -115,7 +115,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             }
 
             selectBtns[selects[i].idx].GetComponentInChildren<Text>().text = selects[i].selectInfo;
-            if(selects[i].selectInfoUpper != "")
+            if (selects[i].selectInfoUpper != "")
             {
                 Text textInfoUpper = selectBtns[selects[i].idx].GetComponentsInChildren<Text>()[1];
                 textInfoUpper.text = selects[i].selectInfoUpper;
