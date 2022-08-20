@@ -16,7 +16,11 @@ public class BackgroundEffectController : MonoSingleton<BackgroundEffectControll
     public void AddRisk()
     {
         canvasGroup.alpha = medium / 50f;
-        Debug.Log("AddRisk " + medium / 50f);
+    }
+
+    public void SetRisk(float risk)
+    {
+        canvasGroup.alpha = risk;
     }
 
     public void SetMedium()

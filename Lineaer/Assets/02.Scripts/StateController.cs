@@ -100,6 +100,8 @@ public class StateController : MonoSingleton<StateController>
         bool excess = stateValues[(int)stateType] >= MAX_VALUE;
         int endingIdx = excess ? 1 : 2;
 
+        BackgroundEffectController.Instance.SetRisk(1f);
+
         switch (stateType)
         {
             case StateType.HEALTH:
