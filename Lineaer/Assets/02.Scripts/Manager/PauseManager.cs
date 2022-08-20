@@ -20,4 +20,9 @@ public class PauseManager : MonoSingleton<PauseManager>
         isPaused = Time.timeScale == 0;
         transform.GetChild(0).gameObject.SetActive(isPaused);
     }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
 }
