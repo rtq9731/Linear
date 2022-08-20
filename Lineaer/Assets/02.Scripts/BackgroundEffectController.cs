@@ -26,10 +26,11 @@ public class BackgroundEffectController : MonoSingleton<BackgroundEffectControll
     public void SetMedium()
     {
         medium = 0;
+        float max = 0;
         for (int i = 0; i < (int)StateType.COUNT; ++i)
         {
-            medium += (Mathf.Abs(50 - StateController.Instance.GetStateValue((StateType)i)));
+            max = max < (Mathf.Abs(50 - StateController.Instance.GetStateValue((StateType)i))) ? Mathf.Abs(50 - StateController.Instance.GetStateValue((StateType)i)) : max;
         }
-        medium /= (int)StateType.COUNT;
+        medium = max;
     }
 }
