@@ -227,74 +227,6 @@ MonoBehaviour:
     pageCnt: 5
   - idx: 1
     nodes:
-    - idx: 4
-      dialogs:
-      - "\uC624\uB79C\uB9CC\uC774\uC5D0\uC694! \uAE00\uC740 \uC798 \uC4F0\uACE0 \uC788\uB098\uC694?"
-      upperDialog:
-      - 
-      sprites:
-      - {fileID: 21300000, guid: e66b3eea8eecb90458dd7a338d04c29c, type: 3}
-      selects:
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 0
-        selectInfo: "\uADF8\uB7FC\uC694. \uC694\uC998\uC740 \uC9D1\uD544\uD558\uB290\uB77C
-          \uC815\uC2E0\uC774 \uC5C6\uB124\uC694."
-        selectInfoUpper: 
-        result: 0
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: 10
-          plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 1
-        selectInfo: "\uC5B4\u2026 \uB124.. \u314E\u314E"
-        selectInfoUpper: 
-        result: 0
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: -10
-          plusHealth: 0
-    - idx: 1
-      dialogs:
-      - "\uB2F9\uC2E0\uC740 \uB2E4\uB978 \uC0AC\uB78C\uC774 \uC4F4 \uAE00\uC744 \uC77D\uB358
-        \uB3C4\uC911 \uC601\uAC10\uC774 \uB5A0\uC62C\uB790\uC2B5\uB2C8\uB2E4. \uB2F9\uC2E0\uC774
-        \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
-      upperDialog:
-      - 
-      sprites:
-      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
-      selects:
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 0
-        selectInfo: "\uB300\uC911\uC801\uC774\uACE0 \uC0C1\uC5C5\uC801\uC778 \uC18C\uC124"
-        selectInfoUpper: 
-        result: 2
-        resultInfo:
-          plusMoney: 20
-          plusMental: 0
-          plusWriting: -10
-          plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 1
-        selectInfo: "\uB09C\uD574\uD558\uACE0 \uAE4A\uC740 \uB0B4\uC6A9\uC744 \uB2E4\uB8EC
-          \uC2DC"
-        selectInfoUpper: 
-        result: 2
-        resultInfo:
-          plusMoney: -20
-          plusMental: 0
-          plusWriting: 10
-          plusHealth: 0
     - idx: 0
       dialogs:
       - "\uC548\uB155\uD558\uC288? \uC138\uC775\uC2A4\uD53C\uC5B4\uC528, \uC0C8\uB85C
@@ -328,6 +260,73 @@ MonoBehaviour:
           plusMoney: 10
           plusMental: 0
           plusWriting: 0
+          plusHealth: 0
+    - idx: 2
+      dialogs:
+      - "\uC170\uC775\uC2A4\uD53C\uC5B4! \uB124 \uBA4D\uCCAD\uD55C \uAE00\uC740 \uC798
+        \uBCF4\uC558\uB2E4. \uADF8 \uBC14\uBCF4 \uAC19\uC740 \uB2E8\uC5B4 \uC120\uD0DD\uC740
+        \uC880 \uACE0\uCE58\uB294 \uAC8C\n\uC5B4\uB5BB\uACA0\uB098?"
+      upperDialog:
+      - 
+      sprites:
+      - {fileID: 21300000, guid: 82fef2b2e3198e1458b93cc5aa086d8c, type: 3}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uB2E8\uC5B4.. \uC120\uD0DD..? \uD760\u2026"
+        selectInfoUpper: 
+        result: 3
+        resultInfo:
+          plusMoney: 0
+          plusMental: -20
+          plusWriting: 10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 1
+        selectInfo: "\uB9D0\uB3C4 \uC548 \uB418\uB294 \uC18C\uB9AC."
+        selectInfoUpper: 
+        result: 3
+        resultInfo:
+          plusMoney: 0
+          plusMental: -10
+          plusWriting: 0
+          plusHealth: 0
+    - idx: 4
+      dialogs:
+      - "\uC624\uB79C\uB9CC\uC774\uC5D0\uC694! \uAE00\uC740 \uC798 \uC4F0\uACE0 \uC788\uB098\uC694?"
+      upperDialog:
+      - 
+      sprites:
+      - {fileID: 21300000, guid: e66b3eea8eecb90458dd7a338d04c29c, type: 3}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uADF8\uB7FC\uC694. \uC694\uC998\uC740 \uC9D1\uD544\uD558\uB290\uB77C
+          \uC815\uC2E0\uC774 \uC5C6\uB124\uC694."
+        selectInfoUpper: 
+        result: 0
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 1
+        selectInfo: "\uC5B4\u2026 \uB124.. \u314E\u314E"
+        selectInfoUpper: 
+        result: 0
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: -10
           plusHealth: 0
     - idx: 3
       dialogs:
@@ -363,39 +362,40 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 20
           plusHealth: -10
-    - idx: 2
+    - idx: 1
       dialogs:
-      - "\uC170\uC775\uC2A4\uD53C\uC5B4! \uB124 \uBA4D\uCCAD\uD55C \uAE00\uC740 \uC798
-        \uBCF4\uC558\uB2E4. \uADF8 \uBC14\uBCF4 \uAC19\uC740 \uB2E8\uC5B4 \uC120\uD0DD\uC740
-        \uC880 \uACE0\uCE58\uB294 \uAC8C\n\uC5B4\uB5BB\uACA0\uB098?"
+      - "\uB2F9\uC2E0\uC740 \uB2E4\uB978 \uC0AC\uB78C\uC774 \uC4F4 \uAE00\uC744 \uC77D\uB358
+        \uB3C4\uC911 \uC601\uAC10\uC774 \uB5A0\uC62C\uB790\uC2B5\uB2C8\uB2E4. \uB2F9\uC2E0\uC774
+        \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
       upperDialog:
       - 
       sprites:
-      - {fileID: 21300000, guid: 82fef2b2e3198e1458b93cc5aa086d8c, type: 3}
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
         isRestartSelect: 0
         idx: 0
-        selectInfo: "\uB2E8\uC5B4.. \uC120\uD0DD..? \uD760\u2026"
+        selectInfo: "\uB300\uC911\uC801\uC774\uACE0 \uC0C1\uC5C5\uC801\uC778 \uC18C\uC124"
         selectInfoUpper: 
-        result: 3
+        result: 2
         resultInfo:
-          plusMoney: 0
-          plusMental: -20
-          plusWriting: 10
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: -10
           plusHealth: 0
       - isChapterSelect: 0
         isEndSelect: 0
         isRestartSelect: 0
         idx: 1
-        selectInfo: "\uB9D0\uB3C4 \uC548 \uB418\uB294 \uC18C\uB9AC."
+        selectInfo: "\uB09C\uD574\uD558\uACE0 \uAE4A\uC740 \uB0B4\uC6A9\uC744 \uB2E4\uB8EC
+          \uC2DC"
         selectInfoUpper: 
-        result: 3
+        result: 2
         resultInfo:
-          plusMoney: 0
-          plusMental: -10
-          plusWriting: 0
+          plusMoney: -20
+          plusMental: 0
+          plusWriting: 10
           plusHealth: 0
     endNode:
       idx: 0
@@ -437,25 +437,34 @@ MonoBehaviour:
     pageCnt: 5
   - idx: 2
     nodes:
-    - idx: 5
+    - idx: 3
       dialogs:
-      - "\uC73C\uC544, \uC624\uB79C\uB9CC\uC774\uC5D0\uC694 \uC624\uB79C\uB9CC! \uC798
-        \uC9C0\uB0B4\uACE0 \uC788\uC8E0? \uC870\uB9CC\uAC04 \uD070\uC77C\uC774 \uC77C\uC5B4\uB0A0\uAC70\uC5D0\uC694.
-        \uC870\uC2EC\uD574\uC694!"
+      - "\uC624, \uC170\uC775\uC2A4\uD53C\uC5B4\uC528? \uB9C8\uCE68 \uC798 \uC624\uC168\uC2B5\uB2C8\uB2E4.
+        \uAE00 \uC4F0\uC2E0\uB2E4\uBA74\uC11C\uC694?"
+      - "\uC81C\uAC00 \uC544\uB294 \uBD84\uAED8 \uCC45 \uD55C \uAD8C\uC744 \uAC00\uC838\uB2E4
+        \uB4DC\uB9AC\uAE30\uB85C \uD574\uC11C, \uD639\uC2DC \uC801\uB2F9\uD788 \uD55C
+        \uAD8C \uC9D1\uD544\uD574\uC8FC\uC2E4 \uC218 \uC788\uC744\uAE4C\uC694?"
+      - "\uC0AC\uB840\uB294 \uC12D\uC12D\uD558\uC9C0 \uC54A\uAC8C \uD574\uB4DC\uB9AC\uACA0\uC2B5\uB2C8\uB2E4."
+      - "\uC6EC\uB9CC\uD55C \uCC45\uC740 \uB2E4 \uAC00\uC9C0\uACE0 \uACC4\uC2E0 \uBD84\uC774\uB77C,
+        \uC0C8 \uCC45\uC744 \uCC3E\uAE30\uAC00 \uD798\uB4DC\uB124\uC694."
       upperDialog:
       - 
+      - 
+      - 
+      - 
+      - 
       sprites:
-      - {fileID: 21300000, guid: 0ba668f9352310c48a78a553e54630a6, type: 3}
+      - {fileID: 21300000, guid: f2ddfcfc169ae07459ab7ee33ebbbb76, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
         isRestartSelect: 0
         idx: 0
-        selectInfo: "\uC54C\uC558\uC5B4\uC694"
+        selectInfo: "\uBB3C\uB860\uC774\uC8E0, \uB9E1\uACA8\uB9CC \uC8FC\uC138\uC694"
         selectInfoUpper: 
-        result: 6
+        result: 4
         resultInfo:
-          plusMoney: 0
+          plusMoney: 20
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
@@ -463,21 +472,9 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 0
         idx: 1
-        selectInfo: "\uC774\uD574\uD588\uC5B4\uC694"
+        selectInfo: "\uC74C.. \uC9C0\uAE08\uC740 \uC870\uAE08 \uD798\uB4E0\uB370\uC694"
         selectInfoUpper: 
-        result: 6
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: 0
-          plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 2
-        selectInfo: "\uACE0\uB9C8\uC6CC\uC694"
-        selectInfoUpper: 
-        result: 6
+        result: 4
         resultInfo:
           plusMoney: 0
           plusMental: 0
@@ -532,34 +529,59 @@ MonoBehaviour:
           plusMental: -20
           plusWriting: -20
           plusHealth: 0
-    - idx: 3
+    - idx: 7
       dialogs:
-      - "\uC624, \uC170\uC775\uC2A4\uD53C\uC5B4\uC528? \uB9C8\uCE68 \uC798 \uC624\uC168\uC2B5\uB2C8\uB2E4.
-        \uAE00 \uC4F0\uC2E0\uB2E4\uBA74\uC11C\uC694?"
-      - "\uC81C\uAC00 \uC544\uB294 \uBD84\uAED8 \uCC45 \uD55C \uAD8C\uC744 \uAC00\uC838\uB2E4
-        \uB4DC\uB9AC\uAE30\uB85C \uD574\uC11C, \uD639\uC2DC \uC801\uB2F9\uD788 \uD55C
-        \uAD8C \uC9D1\uD544\uD574\uC8FC\uC2E4 \uC218 \uC788\uC744\uAE4C\uC694?"
-      - "\uC0AC\uB840\uB294 \uC12D\uC12D\uD558\uC9C0 \uC54A\uAC8C \uD574\uB4DC\uB9AC\uACA0\uC2B5\uB2C8\uB2E4."
-      - "\uC6EC\uB9CC\uD55C \uCC45\uC740 \uB2E4 \uAC00\uC9C0\uACE0 \uACC4\uC2E0 \uBD84\uC774\uB77C,
-        \uC0C8 \uCC45\uC744 \uCC3E\uAE30\uAC00 \uD798\uB4DC\uB124\uC694."
+      - "\uAE00\uB77C\uBBF8\uC2A4\uC758 \uC601\uC8FC\uB2D8!"
+      - "\uCF54\uB354(Cawdor)\uC758 \uC601\uC8FC\uC5EC!"
       upperDialog:
       - 
       - 
-      - 
-      - 
-      - 
       sprites:
-      - {fileID: 21300000, guid: f2ddfcfc169ae07459ab7ee33ebbbb76, type: 3}
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
         isRestartSelect: 0
         idx: 0
-        selectInfo: "\uBB3C\uB860\uC774\uC8E0, \uB9E1\uACA8\uB9CC \uC8FC\uC138\uC694"
+        selectInfo: "\uB9CC\uC138! \uC55E\uB0A0\uC758 \uC655\uC774\uC2DC\uC5EC!"
         selectInfoUpper: 
-        result: 4
+        result: 8
         resultInfo:
-          plusMoney: 20
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 40
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 1
+        selectInfo: "\uC774\uC81C \uB0B4 \uADF8\uB300\uB4E4\uC744 \uCC98\uB2E8\uD558\uACA0\uB178\uB77C! "
+        selectInfoUpper: 
+        result: 8
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: -20
+          plusHealth: 0
+    - idx: 5
+      dialogs:
+      - "\uC73C\uC544, \uC624\uB79C\uB9CC\uC774\uC5D0\uC694 \uC624\uB79C\uB9CC! \uC798
+        \uC9C0\uB0B4\uACE0 \uC788\uC8E0? \uC870\uB9CC\uAC04 \uD070\uC77C\uC774 \uC77C\uC5B4\uB0A0\uAC70\uC5D0\uC694.
+        \uC870\uC2EC\uD574\uC694!"
+      upperDialog:
+      - 
+      sprites:
+      - {fileID: 21300000, guid: 0ba668f9352310c48a78a553e54630a6, type: 3}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uC54C\uC558\uC5B4\uC694"
+        selectInfoUpper: 
+        result: 6
+        resultInfo:
+          plusMoney: 0
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
@@ -567,13 +589,64 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 0
         idx: 1
-        selectInfo: "\uC74C.. \uC9C0\uAE08\uC740 \uC870\uAE08 \uD798\uB4E0\uB370\uC694"
+        selectInfo: "\uC774\uD574\uD588\uC5B4\uC694"
         selectInfoUpper: 
-        result: 4
+        result: 6
         resultInfo:
           plusMoney: 0
           plusMental: 0
           plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 2
+        selectInfo: "\uACE0\uB9C8\uC6CC\uC694"
+        selectInfoUpper: 
+        result: 6
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+    - idx: 6
+      dialogs:
+      - "\uBCC4\uB4E4\uC774 \uBD88\uC774\uB77C\uB294 \uAC83\uC744 \uC758\uC2EC\uD558\uACE0,"
+      - "\uD0DC\uC591\uC774 \uC6C0\uC9C1\uC774\uC9C0 \uC54A\uB294\uB2E4\uB294 \uAC83\uC744
+        \uC758\uC2EC\uD558\uACE0,"
+      - "\uC9C4\uC2E4\uC774 \uAC70\uC9D3\uC774 \uB420 \uC218 \uC788\uB2E4\uB294 \uAC83\uC744
+        \uC758\uC2EC\uD560\uC9C0\uB77C\uB3C4"
+      upperDialog:
+      - Doubt thou the stars are fire;
+      - Doubt that the sun doth move;
+      - Doubt truth to be a liar;
+      sprites:
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
+      selects:
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 0
+        selectInfo: "\uB0B4 \uC0AC\uB791\uB9CC\uC740 \uC758\uC2EC\uD558\uC9C0 \uB9C8\uC2DC\uC624."
+        selectInfoUpper: But never doubt I love
+        result: 7
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 40
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 0
+        idx: 1
+        selectInfo: "\uB098\uC758 \uB9C8\uC74C\uB9CC\uC740 \uC758\uC2EC\uD558\uC9C0
+          \uB9C8\uC2DC\uC624"
+        selectInfoUpper: But never doubt my mind
+        result: 7
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: -20
           plusHealth: 0
     - idx: 2
       dialogs:
@@ -679,79 +752,6 @@ MonoBehaviour:
           plusMoney: -20
           plusMental: 0
           plusWriting: 20
-          plusHealth: 0
-    - idx: 6
-      dialogs:
-      - "\uBCC4\uB4E4\uC774 \uBD88\uC774\uB77C\uB294 \uAC83\uC744 \uC758\uC2EC\uD558\uACE0,"
-      - "\uD0DC\uC591\uC774 \uC6C0\uC9C1\uC774\uC9C0 \uC54A\uB294\uB2E4\uB294 \uAC83\uC744
-        \uC758\uC2EC\uD558\uACE0,"
-      - "\uC9C4\uC2E4\uC774 \uAC70\uC9D3\uC774 \uB420 \uC218 \uC788\uB2E4\uB294 \uAC83\uC744
-        \uC758\uC2EC\uD560\uC9C0\uB77C\uB3C4"
-      upperDialog:
-      - Doubt thou the stars are fire;
-      - Doubt that the sun doth move;
-      - Doubt truth to be a liar;
-      sprites:
-      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
-      selects:
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 0
-        selectInfo: "\uB0B4 \uC0AC\uB791\uB9CC\uC740 \uC758\uC2EC\uD558\uC9C0 \uB9C8\uC2DC\uC624."
-        selectInfoUpper: But never doubt I love
-        result: 7
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: 40
-          plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 1
-        selectInfo: "\uB098\uC758 \uB9C8\uC74C\uB9CC\uC740 \uC758\uC2EC\uD558\uC9C0
-          \uB9C8\uC2DC\uC624"
-        selectInfoUpper: But never doubt my mind
-        result: 7
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: -20
-          plusHealth: 0
-    - idx: 7
-      dialogs:
-      - "\uAE00\uB77C\uBBF8\uC2A4\uC758 \uC601\uC8FC\uB2D8!"
-      - "\uCF54\uB354(Cawdor)\uC758 \uC601\uC8FC\uC5EC!"
-      upperDialog:
-      - 
-      - 
-      sprites:
-      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
-      selects:
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 0
-        selectInfo: "\uB9CC\uC138! \uC55E\uB0A0\uC758 \uC655\uC774\uC2DC\uC5EC!"
-        selectInfoUpper: 
-        result: 8
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: 40
-          plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 0
-        isRestartSelect: 0
-        idx: 1
-        selectInfo: "\uC774\uC81C \uB0B4 \uADF8\uB300\uB4E4\uC744 \uCC98\uB2E8\uD558\uACA0\uB178\uB77C! "
-        selectInfoUpper: 
-        result: 8
-        resultInfo:
-          plusMoney: 0
-          plusMental: 0
-          plusWriting: -20
           plusHealth: 0
     endNode:
       idx: 0
@@ -1137,7 +1137,7 @@ MonoBehaviour:
       - isChapterSelect: 0
         isEndSelect: 1
         isRestartSelect: 0
-        idx: 0
+        idx: 1
         selectInfo: "\uC544\uD30C\u2026"
         selectInfoUpper: 
         result: 0
