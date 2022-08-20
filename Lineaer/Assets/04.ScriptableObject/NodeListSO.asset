@@ -31,7 +31,7 @@ MonoBehaviour:
         selectInfoUpper: 
         result: 1
         resultInfo:
-          plusMoney: 100
+          plusMoney: 0
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
