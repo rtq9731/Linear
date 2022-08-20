@@ -69,6 +69,9 @@ public class StateController : MonoSingleton<StateController>
             stateValues[(int)stateType] = Mathf.Clamp(stateValues[(int)stateType], MIN_VALUE + 1, MAX_VALUE - 1);
         }
 
+        BackgroundEffectController.Instance.SetMedium();
+        BackgroundEffectController.Instance.AddRisk();
+
         CheckedStateLimited(stateType);
         StartCoroutine(ChangeStateValue((StateType)stateType, stateValues[(int)stateType]));
     }
