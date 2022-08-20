@@ -22,6 +22,8 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public const int END_CHAPTER = 1616;
 
+    private bool isEndingChapter = false;
+
     public int CurChapter
     {
         set
