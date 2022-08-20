@@ -1446,6 +1446,7 @@ GameObject:
   - component: {fileID: 5292272668760165735}
   - component: {fileID: 6346497982076558858}
   - component: {fileID: 6570881741158848085}
+  - component: {fileID: 5273866464746488052}
   m_Layer: 5
   m_Name: Flower
   m_TagString: Untagged
@@ -1510,6 +1511,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5273866464746488052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5091505927944890803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc71a8578bce7c4cad3dfd7dd855845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerImage: {fileID: 6570881741158848085}
+  flowerSprites:
+  - {fileID: 21300000, guid: 7d6b597ac2f32a54a90206da6879461d, type: 3}
+  - {fileID: 21300000, guid: 7c4a4b9898f5541488d658523e387765, type: 3}
+  - {fileID: 21300000, guid: f19fbf88c2fa5da49abae36b2f20a367, type: 3}
 --- !u!1 &6941354352121916810
 GameObject:
   m_ObjectHideFlags: 0

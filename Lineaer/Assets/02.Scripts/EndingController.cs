@@ -32,7 +32,7 @@ public class EndingController : MonoSingleton<EndingController>
 
     public void Ending()
     {
-        ScreenFader.Instance.ScreenFade(1f, 0, () => {
+        ScreenFader.Instance.ScreenFade(1f, 1f, () => {
             foreach (var item in removeObjs)
             {
                 item.gameObject.SetActive(false);
