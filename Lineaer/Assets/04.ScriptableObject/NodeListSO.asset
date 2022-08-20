@@ -1112,6 +1112,18 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 10
           plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
     pageCnt: 0
   - idx: 102
     nodes: []
@@ -1137,6 +1149,18 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 1
         idx: 0
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
         selectInfoUpper: 
         result: 1
@@ -1177,6 +1201,18 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 10
           plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
     pageCnt: 0
   - idx: 104
     nodes: []
@@ -1200,6 +1236,18 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 1
         idx: 0
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
         selectInfoUpper: 
         result: 1
@@ -1246,6 +1294,18 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 10
           plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
     pageCnt: 0
   - idx: 106
     nodes: []
@@ -1269,6 +1329,18 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 1
         idx: 0
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
         selectInfoUpper: 
         result: 1
@@ -1314,6 +1386,18 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 1
         idx: 0
+        selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 20
+          plusMental: 0
+          plusWriting: 10
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
         selectInfo: "\uC544, \uC548\uB3FC\u2026 \uB098\u2026 \uB09C \uC544\uC9C1..!"
         selectInfoUpper: 
         result: 1
@@ -1391,6 +1475,18 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
+        selectInfo: ...
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
     pageCnt: 1
   - idx: 109
     nodes: []
@@ -1409,6 +1505,18 @@ MonoBehaviour:
         isEndSelect: 0
         isRestartSelect: 1
         idx: 0
+        selectInfo: "\uC544\uC557\u2026 \uC548\uB3FC\u2026!"
+        selectInfoUpper: 
+        result: 1
+        resultInfo:
+          plusMoney: 0
+          plusMental: 0
+          plusWriting: 0
+          plusHealth: 0
+      - isChapterSelect: 0
+        isEndSelect: 0
+        isRestartSelect: 1
+        idx: 1
         selectInfo: "\uC544\uC557\u2026 \uC548\uB3FC\u2026!"
         selectInfoUpper: 
         result: 1
