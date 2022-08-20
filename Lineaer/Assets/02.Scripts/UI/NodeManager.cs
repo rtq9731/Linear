@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,13 +44,13 @@ public class NodeManager : MonoSingleton<NodeManager>
     public void SetLayout()
     {
         NodeInfo nodeInfo = null;
-        if (curSelectNum >= data.chapters.Find(item => item.idx == curChapter).pageCnt)
+        if (curSelectNum >= data.chapters[curChapter].pageCnt)
         {
-            nodeInfo = data.chapters.Find(item => item.idx == curChapter).endNode;
+            nodeInfo = data.chapters[curChapter].endNode;
         }
         else
         {
-            nodeInfo = data.chapters.Find(item => item.idx == curChapter).nodes[curSelectNum];
+            nodeInfo = data.chapters[curChapter].nodes[curSelectNum];
         }
 
         for (int i = 0; i < selectBtns.Length; i++)
@@ -75,7 +76,9 @@ public class NodeManager : MonoSingleton<NodeManager>
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curChapter = selects[y].result;
+                    curChapter = Array.IndexOf(data.chapters.Select(item => item.idx).ToArray(), curChapter);
                     curSelectNum = 0;
+                    Debug.Log("curChapter : " + curChapter);
                     data.chapters[curChapter].Shuffle();
                     SetLayout();
                 }); // 만약 분기 이벤트라면 몇번 챕터로 가는지 체크
