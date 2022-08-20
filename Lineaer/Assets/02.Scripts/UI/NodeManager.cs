@@ -147,25 +147,56 @@ public class NodeManager : MonoSingleton<NodeManager>
                     StateController.Instance.AddStateValue(StateType.MONEY, selects[y].resultInfo.plusMoney);
                     if (selects[y].resultInfo.plusMoney != 0)
                     {
-                        TextEffectManager.Instance.PlayDamageEffect("")
+                        if (0 < selects[y].resultInfo.plusMoney)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("µ· »ó½Â!", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.green);
+                        }
+                        else if (selects[y].resultInfo.plusMoney < 0)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("µ· ÇÏ¶ô.", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.red);
+                        }
                         effectOffSet += 128;
                     }
 
                     StateController.Instance.AddStateValue(StateType.MENTAL, selects[y].resultInfo.plusMental);
                     if (selects[y].resultInfo.plusMental != 0)
                     {
+                        if (0 < selects[y].resultInfo.plusMental)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("Á¤½Å »ó½Â!", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.green);
+                        }
+                        else if (selects[y].resultInfo.plusMental < 0)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("Á¤½Å ÇÏ¶ô.", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.red);
+                        }
                         effectOffSet += 128;
                     }
 
                     StateController.Instance.AddStateValue(StateType.HEALTH, selects[y].resultInfo.plusHealth);
                     if (selects[y].resultInfo.plusHealth != 0)
                     {
+                        if (0 < selects[y].resultInfo.plusHealth)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("°Ç°­ »ó½Â!", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.green);
+                        }
+                        else if (selects[y].resultInfo.plusHealth < 0)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("°Ç°­ ÇÏ¶ô.", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.red);
+                        }
                         effectOffSet += 128;
                     }
 
                     StateController.Instance.AddStateValue(StateType.WRITING, selects[y].resultInfo.plusWriting);
                     if (selects[y].resultInfo.plusWriting != 0)
                     {
+                        if (0 < selects[y].resultInfo.plusWriting)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("ÇÊ·Â »ó½Â!", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.green);
+                        }
+                        else if (selects[y].resultInfo.plusWriting < 0)
+                        {
+                            TextEffectManager.Instance.PlayDamageEffect("ÇÊ·Â ÇÏ¶ô.", (Vector2)Input.mousePosition + Vector2.right * effectOffSet, Color.red);
+                        }
                         effectOffSet += 128;
                     }
 

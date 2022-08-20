@@ -7,28 +7,37 @@ public class TextEffectManager : MonoSingleton<TextEffectManager>
 {
     [SerializeField] TextEffect effectTextPrefab = null;
 
-    Queue<TextEffect> textPool;
+    Queue<TextEffect> textPool = new Queue<TextEffect>();
 
     private void Start()
     {
         for (int i = 0; i < 5; i++)
         {
-            GetEffect();
+            TextEffect effect = Instantiate<TextEffect>(effectTextPrefab, transform);
+            effect.gameObject.SetActive(false);
+            textPool.Enqueue(effect);
         }
     }
 
     private TextEffect GetEffect()
     {
         TextEffect result = null;
-        if(!textPool.Peek().gameObject.activeSelf)
+        if(textPool.Count > 0)
         {
-            result = Instantiate<TextEffect>(effectTextPrefab, transform);
-            textPool.Enqueue(result);
+            if (!textPool.Peek().gameObject.activeSelf)
+            {
+                result = Instantiate<TextEffect>(effectTextPrefab, transform);
+                textPool.Enqueue(result);
+            }
+            else
+            {
+                result = textPool.Dequeue();
+                textPool.Enqueue(result);
+            }
         }
         else
         {
-            result = textPool.Dequeue();
-            textPool.Enqueue(result);
+            result = Instantiate<TextEffect>(effectTextPrefab, transform);
         }
         result.gameObject.SetActive(false);
         return result;
