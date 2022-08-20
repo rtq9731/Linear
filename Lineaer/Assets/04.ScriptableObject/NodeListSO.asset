@@ -835,7 +835,7 @@ MonoBehaviour:
       upperDialog:
       - 
       sprites:
-      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
+      - {fileID: 21300000, guid: 82fef2b2e3198e1458b93cc5aa086d8c, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 1
@@ -850,14 +850,14 @@ MonoBehaviour:
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
-      - isChapterSelect: 0
-        isEndSelect: 1
+      - isChapterSelect: 1
+        isEndSelect: 0
         isRestartSelect: 0
         idx: 1
         selectInfo: "\uB2F9\uC2E0 \uB9D0 \uC18D\uC758 \uBD84\uB178\uB294 \uC774\uD574\uD558\uC9C0\uB9CC
           \uBB34\uC2A8 \uB9D0\uC778\uC9C0\uB294 \uBAA8\uB974\uACA0\uC5B4\uC694."
         selectInfoUpper: 
-        result: 1616
+        result: 5
         resultInfo:
           plusMoney: 0
           plusMental: -20
