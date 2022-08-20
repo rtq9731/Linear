@@ -138,6 +138,7 @@ public class StateController : MonoSingleton<StateController>
 
     public void SetChapter3(bool isChapter3)
     {
+        Debug.Log("SetChapter3");
         _isChapter3 = isChapter3;
     }
 }

@@ -23,6 +23,7 @@ public class NodeManager : MonoSingleton<NodeManager>
     public const int END_CHAPTER = 1616;
 
     private bool isEndingChapter = false;
+    private bool isChapter3 = false;
 
     public int CurChapter
     {
@@ -75,20 +76,15 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selects.Length; i++)
         {
             int y = i;
-            if (selects[y].result == 5)
-            {
-                StateController.Instance.SetChapter3(true);
-            }
 
-            if (selects[y].result == END_CHAPTER)
-            {
-                EndingController.Instance.Ending();
-                return;
-            }
-            else if (selects[i].isChapterSelect)
+            isChapter3 = selects[y].result == 5;
+            isEndingChapter = selects[y].result == END_CHAPTER;
+
+            if (selects[i].isChapterSelect)
             {
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
+                    StateController.Instance.SetChapter3(isChapter3);
                     curChapter = selects[y].result;
                     curChapter = Array.IndexOf(data.chapters.Select(item => item.idx).ToArray(), curChapter);
                     curSelectNum = 0;
@@ -100,15 +96,23 @@ public class NodeManager : MonoSingleton<NodeManager>
             {
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
-                    curChapter = selects[y].result;
-                    ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () =>
+                    if (isEndingChapter)
                     {
-                        audioSource.Play();
-                        SetLayout();
-                    });
+                        EndingController.Instance.Ending();
+                        return;
+                    }
+                    else
+                    {
+                        curChapter = selects[y].result;
+                        ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () =>
+                        {
+                            audioSource.Play();
+                            SetLayout();
+                        });
 
-                    curSelectNum = 0;
-                    FindObjectOfType<BGM>().StopBGM();
+                        curSelectNum = 0;
+                        FindObjectOfType<BGM>().StopBGM();
+                    }
                 }); // 만약 엔딩 이벤트라면 엔딩 화면 불러오기
             }
             else if (selects[i].isRestartSelect)
