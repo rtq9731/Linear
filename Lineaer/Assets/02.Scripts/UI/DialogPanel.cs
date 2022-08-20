@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
 public class DialogPanel : MonoBehaviour
 {
@@ -89,6 +90,7 @@ public class DialogPanel : MonoBehaviour
 
             imageDialogComplete.gameObject.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+
             imageDialogComplete.gameObject.SetActive(false);
 
             dialogNum++;
