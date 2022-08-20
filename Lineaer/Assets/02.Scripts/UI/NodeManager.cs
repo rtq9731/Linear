@@ -24,6 +24,7 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     private bool isEndingChapter = false;
     private bool isChapter3 = false;
+    private bool buttonMoveComplete = false;
 
     public DialogPanel DialogPanel { get { return dialogPanel; } }
 
@@ -145,14 +146,40 @@ public class NodeManager : MonoSingleton<NodeManager>
         }
 
         Sequence seq = DOTween.Sequence();
+        StartCoroutine(MouseSensor());
         for (int i = 0; i < selects.Length; i++)
         {
             selectBtns[i].gameObject.SetActive(true);
             int y = i;
+            buttonMoveComplete = false;
             seq.Append(selectBtns[i].GetComponent<RectTransform>().DOAnchorPos(btnOriginPos[i], 0.5f).SetEase(Ease.InOutBack));
             seq.AppendInterval(0.125f);
         }
-        seq.OnComplete(() => selectBtns.ToList().ForEach(item => item.interactable = true));
+        seq.OnComplete(() =>
+        {
+            selectBtns.ToList().ForEach(item => item.interactable = true);
+            buttonMoveComplete = true;
+        });
         seq.Play();
+    }
+
+    private IEnumerator MouseSensor()
+    {
+        yield return new WaitForSeconds(0.1f);
+        while (!buttonMoveComplete)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                DOTween.KillAll();
+                selectBtns.ToList().ForEach(item => item.interactable = true);
+                buttonMoveComplete = true;
+                for (int i = 0; i < 3; ++i)
+                {
+                    selectBtns[i].GetComponent<RectTransform>().DOAnchorPos(btnOriginPos[i], 0f);
+                }
+                break;
+            }
+            yield return null;
+        }
     }
 }
