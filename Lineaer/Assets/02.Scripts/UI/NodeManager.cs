@@ -25,6 +25,8 @@ public class NodeManager : MonoSingleton<NodeManager>
     private bool isEndingChapter = false;
     private bool isChapter3 = false;
 
+    public DialogPanel DialogPanel { get { return dialogPanel; } }
+
     public int CurChapter
     {
         set

@@ -20,6 +20,12 @@ public class DialogPanel : MonoBehaviour
     string[] dialogs = null;
     string[] upperDialogs = null;
 
+    private float printDelay = 0.1f;
+    public float PrintDelay
+    {
+        set { printDelay = value; }
+    }
+
     int dialogNum = 0;
 
     bool isSkip = false;
@@ -82,7 +88,7 @@ public class DialogPanel : MonoBehaviour
                 }
                 audioSource.clip = clickSounds[Random.Range(0, clickSounds.Length)];
                 audioSource.Play();
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(printDelay);
             }
             yield return new WaitWhile(() => isUpperDialog);
 
