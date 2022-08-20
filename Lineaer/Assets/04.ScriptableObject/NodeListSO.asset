@@ -214,7 +214,8 @@ MonoBehaviour:
         \uB3C4\uC911 \uC601\uAC10\uC774 \uB5A0\uC62C\uB790\uC2B5\uB2C8\uB2E4. \uB2F9\uC2E0\uC774
         \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 0}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
@@ -243,7 +244,8 @@ MonoBehaviour:
       dialogs:
       - "\uC624\uB79C\uB9CC\uC774\uC5D0\uC694! \uAE00\uC740 \uC798 \uC4F0\uACE0 \uC788\uB098\uC694?"
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 21300000, guid: e66b3eea8eecb90458dd7a338d04c29c, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
@@ -274,7 +276,8 @@ MonoBehaviour:
         \uBC1B\uC544\uC628 \uC2E0\uC120\uD55C \uC57C\uCCB4\uC778\uB514 \uD558\uB098
         \uB4DC\uC2E4\uB824\uC720? \uBB3C\uB860 \uB3C8\uC740 \uB530\uB85C \uBC1B\uC544\uC57C\uC96C~"
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 21300000, guid: ce852875b762e8944a27197494f837cf, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
@@ -304,7 +307,8 @@ MonoBehaviour:
         \uBCF4\uC558\uB2E4. \uADF8 \uBC14\uBCF4 \uAC19\uC740 \uB2E8\uC5B4 \uC120\uD0DD\uC740
         \uC880 \uACE0\uCE58\uB294 \uAC8C\n\uC5B4\uB5BB\uACA0\uB098?"
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 21300000, guid: 82fef2b2e3198e1458b93cc5aa086d8c, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
@@ -333,7 +337,8 @@ MonoBehaviour:
       - "\uD639\uC2DC \uC624\uB298 \uC2DC\uAC04 \uB0B4\uC8FC\uC2E4 \uC218 \uC788\uB098\uC694?
         \uC7A0\uAE50 \uC11C\uC810\uC744 \uB4E4\uB9AC\uACE0 \uC2F6\uC5B4\uC11C\uC694."
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 21300000, guid: 83a22b11df1ad714db26ec5a2784994d, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
@@ -366,7 +371,8 @@ MonoBehaviour:
         \uC801\uD78C \uCC45\uC774\uB2E4. \uAC00\uC11C \uC6B0\uB9AC \uAC00\uBB38\uC758
         \uC601\uAD11\uC744 \uC54C\uB9B4 \uC11C\uC0AC\uC2DC\uB97C \uC368\uC624\uAC70\uB77C"
       upperDialog: []
-      sprites: []
+      sprites:
+      - {fileID: 21300000, guid: 329686ac3cb3c3d41ad4ccc9bf835436, type: 3}
       selects:
       - isChapterSelect: 1
         isEndSelect: 0
