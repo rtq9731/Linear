@@ -121,6 +121,12 @@ public class NodeManager : MonoSingleton<NodeManager>
                     curSelectNum = 0;
                     data.chapters[curChapter].Shuffle();
 
+                    if(curChapter == 3 || curChapter == 4)
+                    {
+                        SetLayout();
+                        return;
+                    }
+
                     TranslationManager.Instance.SelectToSelect(() =>
                     {
                         SetLayout();
