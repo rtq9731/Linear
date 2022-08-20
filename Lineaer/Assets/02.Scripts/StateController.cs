@@ -58,7 +58,9 @@ public class StateController : MonoSingleton<StateController>
             return;
         }
 
+
         stateValues[(int)stateType] += value;
+        CheckedStateLimited(stateType);
         StartCoroutine(ChangeStateValue((StateType)stateType, stateValues[(int)stateType]));
     }
 
@@ -70,6 +72,43 @@ public class StateController : MonoSingleton<StateController>
     public float GetStateValue(StateType stateType)
     {
         return stateValues[(int)stateType];
+    }
+
+    private void CheckedStateLimited(StateType stateType)
+    {
+        if (stateValues[(int)stateType] < MAX_VALUE && stateValues[(int)stateType] > MIN_VALUE)
+        {
+            return;
+        }
+        else if (stateType == StateType.HEALTH && stateValues[(int)stateType] >= MAX_VALUE)
+        {
+            return;
+        }
+
+        bool excess = stateValues[(int)stateType] >= MAX_VALUE;
+        int endingIdx = excess ? 1 : 2;
+
+        switch (stateType)
+        {
+            case StateType.HEALTH:
+                endingIdx = 107;
+                break;
+            case StateType.MONEY:
+                endingIdx += 100;
+                break;
+            case StateType.MENTAL:
+                endingIdx += 102;
+                break;
+            case StateType.WRITING:
+                endingIdx += 104;
+                break;
+            default:
+                Debug.LogWarning("type is not defined");
+                break;
+        }
+
+        NodeManager.Instance.CurChapter = endingIdx;
+        NodeManager.Instance.SetLayout();
     }
 
     private IEnumerator ChangeStateValue(StateType stateType, float value, float duration = 1.25f)

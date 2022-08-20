@@ -23,6 +23,14 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     Vector2[] btnOriginPos = new Vector2[3];
 
+    public int CurChapter
+    {
+        set
+        {
+            curChapter = value;
+        }
+    }
+
     int curChapter = 0;
     int curSelectNum = 0;
 
@@ -79,7 +87,7 @@ public class NodeManager : MonoSingleton<NodeManager>
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curChapter = selects[y].result;
-                    ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () => 
+                    ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () =>
                     {
                         audioSource.Play();
                         SetLayout();
@@ -90,7 +98,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             }
             else if (selects[i].isRestartSelect)
             {
-                selectBtns[selects[i].idx].onClick.AddListener(() => UnityEngine.SceneManagement.SceneManager.LoadScene("LobbyScene"));
+                selectBtns[selects[i].idx].onClick.AddListener(() => UnityEngine.SceneManagement.SceneManager.LoadScene("LobbyScene1"));
             }
             else
             {

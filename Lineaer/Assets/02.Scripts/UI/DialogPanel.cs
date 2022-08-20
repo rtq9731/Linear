@@ -45,7 +45,7 @@ public class DialogPanel : MonoBehaviour
 
     private void Update()
     {
-        if(routine != null && !isSkip)
+        if (routine != null && !isSkip)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -64,14 +64,18 @@ public class DialogPanel : MonoBehaviour
             {
                 textUpperDialog[i].text = "";
             }
-            imageTalker.sprite = sprites[dialogNum];
 
-            imageTalker.rectTransform.sizeDelta = sprites[dialogNum].rect.size / 2f;
+            int spriteIdx = sprites.Length <= dialogNum ? sprites.Length - 1 : dialogNum;
+
+            imageTalker.sprite = sprites[spriteIdx];
+
+
+            imageTalker.rectTransform.sizeDelta = sprites[spriteIdx].rect.size / 2f;
             StartCoroutine(SetUpperText(upperDialogs[dialogNum]));
             for (int i = 0; i < dialogs[dialogNum].Length; i++)
             {
                 textDialog.text += dialogs[dialogNum][i];
-                if(isSkip)
+                if (isSkip)
                 {
                     isSkip = false;
                     textDialog.text = dialogs[dialogNum];
@@ -100,7 +104,7 @@ public class DialogPanel : MonoBehaviour
         int line = 0;
         for (int i = 0; i < text.Length; i++)
         {
-            if (text[i] == '\n') // ¸¸¾à ÁÙ¹Ù²ÞÀÌ ¿Â´Ù¸é
+            if (text[i] == '\n') // ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¹Ù²ï¿½ï¿½ï¿½ ï¿½Â´Ù¸ï¿½
             {
                 line++;
                 i++;
@@ -113,7 +117,7 @@ public class DialogPanel : MonoBehaviour
                 isSkip = false;
                 for (int j = 0; j < text.Length; j++)
                 {
-                    if (text[j] == '\n') // ¸¸¾à ÁÙ¹Ù²ÞÀÌ ¿Â´Ù¸é
+                    if (text[j] == '\n') // ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¹Ù²ï¿½ï¿½ï¿½ ï¿½Â´Ù¸ï¿½
                     {
                         line++;
                     }

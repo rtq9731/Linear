@@ -30,7 +30,7 @@ MonoBehaviour:
         selectInfo: "\uC548\uB155\uD558\uC138\uC694, \uADF8\uB7F0\uB370 \uB204\uAD6C\uC138\uC694?"
         result: 1
         resultInfo:
-          plusMoney: 0
+          plusMoney: 100
           plusMental: 0
           plusWriting: 0
           plusHealth: 0
