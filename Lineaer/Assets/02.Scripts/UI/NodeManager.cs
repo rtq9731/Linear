@@ -78,6 +78,12 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public void SetBtns(SelectInfo[] selects)
     {
+
+        for (int i = 0; i < selectBtns.Length; i++)
+        {
+            selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
+        }
+
         for (int i = 0; i < selects.Length; i++)
         {
             int y = i;

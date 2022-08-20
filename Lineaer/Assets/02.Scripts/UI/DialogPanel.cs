@@ -15,6 +15,7 @@ public class DialogPanel : MonoBehaviour
     [SerializeField] AudioSource audioSource = null;
 
     Coroutine routine = null;
+    Coroutine upperRoutine = null;
 
     Sprite[] sprites = null;
     string[] dialogs = null;
@@ -76,7 +77,9 @@ public class DialogPanel : MonoBehaviour
 
             imageTalker.sprite = sprites[spriteIdx];
 
-            StartCoroutine(SetUpperText(upperDialogs[dialogNum]));
+            if (!isUpperDialog)
+                upperRoutine = StartCoroutine(SetUpperText(upperDialogs[dialogNum]));
+
             for (int i = 0; i < dialogs[dialogNum].Length; i++)
             {
                 textDialog.text += dialogs[dialogNum][i];
@@ -106,6 +109,7 @@ public class DialogPanel : MonoBehaviour
 
     private IEnumerator SetUpperText(string text)
     {
+        Debug.Log("윗첨자 세팅!");
         isUpperDialog = true;
         int line = 0;
         for (int i = 0; i < text.Length; i++)
@@ -120,6 +124,7 @@ public class DialogPanel : MonoBehaviour
 
             if (isSkip)
             {
+                textUpperDialog[line].text = "";
                 isSkip = false;
                 for (int j = 0; j < text.Length; j++)
                 {
@@ -132,7 +137,7 @@ public class DialogPanel : MonoBehaviour
                 }
                 break;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
         isUpperDialog = false;
     }
