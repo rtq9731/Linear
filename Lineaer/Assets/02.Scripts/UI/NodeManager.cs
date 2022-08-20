@@ -94,6 +94,7 @@ public class NodeManager : MonoSingleton<NodeManager>
                     });
 
                     curSelectNum = 0;
+                    FindObjectOfType<BGM>().StopBGM();
                 }); // 만약 엔딩 이벤트라면 엔딩 화면 불러오기
             }
             else if (selects[i].isRestartSelect)

@@ -8,7 +8,7 @@ public class BGM : MonoBehaviour
 
     public void PlayBGM()
     {
-
+        audioSource.Play();
     }
 
     public void StopBGM()
