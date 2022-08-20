@@ -47,6 +47,7 @@ public class StateController : MonoSingleton<StateController>
     /// <param name="value"></param>
     public void AddStateValue(StateType stateType, float value)
     {
+        ArrowController.Instance.SetArrow(stateType, value);
         if (0 < value)
         {
             _stateImages[(int)stateType].gameObject.transform.GetChild(0).GetComponent<Image>().color = new Color(0.1222707f, 0.4716981f, 0.07787468f, 1f);
@@ -59,7 +60,6 @@ public class StateController : MonoSingleton<StateController>
         {
             return;
         }
-
 
         stateValues[(int)stateType] += value;
 
