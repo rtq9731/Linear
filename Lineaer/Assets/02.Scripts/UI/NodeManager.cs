@@ -20,6 +20,8 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     Vector2[] btnOriginPos = new Vector2[3];
 
+    public const int END_CHAPTER = 1616;
+
     public int CurChapter
     {
         set
@@ -71,7 +73,11 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selects.Length; i++)
         {
             int y = i;
-            if (selects[i].isChapterSelect)
+            if (selects[y].result == END_CHAPTER)
+            {
+
+            }
+            else if (selects[i].isChapterSelect)
             {
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
