@@ -24,6 +24,11 @@ public class EndingController : MonoSingleton<EndingController>
         "Àª¸®¾ö ¼ÎÀÍ½ºÇÇ¾î!"
     };
 
+    private void Start()
+    {
+        Ending();
+    }
+
     private void PlayClickSound()
     {
         clickSource.clip = clickSounds[clickNum % clickSounds.Length];
@@ -49,9 +54,9 @@ public class EndingController : MonoSingleton<EndingController>
     private IEnumerator EndingCorutine()
     {
         textEnding.text = "";
-        yield return null;
         for (int i = 0; i < dialogs.Length; i++)
         {
+            Debug.Log(i);
             for (int j = 0; j < dialogs[i].Length; j++)
             {
                 textEnding.text += dialogs[i][j];
@@ -63,7 +68,7 @@ public class EndingController : MonoSingleton<EndingController>
 
             while (textEnding.text.Length >= 1)
             {
-                textEnding.text.Remove(textEnding.text.Length - 1);
+                textEnding.text = textEnding.text.Remove(textEnding.text.Length - 1);
                 yield return new WaitForSeconds(0.075f);
             }
 
