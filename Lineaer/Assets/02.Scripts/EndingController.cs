@@ -79,6 +79,6 @@ public class EndingController : MonoSingleton<EndingController>
 
         textEnding.DOFade(0, 2f);
         yield return new WaitForSeconds(2f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LobbyScene1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("CreditScene");
     }
 }
