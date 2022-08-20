@@ -73,9 +73,15 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selects.Length; i++)
         {
             int y = i;
+            if (selects[y].result == 5)
+            {
+                StateController.Instance.SetChapter3(true);
+            }
+
             if (selects[y].result == END_CHAPTER)
             {
-
+                EndingController.Instance.Ending();
+                return;
             }
             else if (selects[i].isChapterSelect)
             {

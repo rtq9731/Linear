@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndingController : MonoBehaviour
+public class EndingController : MonoSingleton<EndingController>
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Ending()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ScreenFader.Instance.ScreenFade(1f);
     }
 }
