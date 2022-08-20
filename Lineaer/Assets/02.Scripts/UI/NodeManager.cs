@@ -141,10 +141,34 @@ public class NodeManager : MonoSingleton<NodeManager>
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     curSelectNum++;
+
+                    float effectOffSet = 0f;
+
                     StateController.Instance.AddStateValue(StateType.MONEY, selects[y].resultInfo.plusMoney);
+                    if (selects[y].resultInfo.plusMoney != 0)
+                    {
+                        TextEffectManager.Instance.PlayDamageEffect("")
+                        effectOffSet += 128;
+                    }
+
                     StateController.Instance.AddStateValue(StateType.MENTAL, selects[y].resultInfo.plusMental);
+                    if (selects[y].resultInfo.plusMental != 0)
+                    {
+                        effectOffSet += 128;
+                    }
+
                     StateController.Instance.AddStateValue(StateType.HEALTH, selects[y].resultInfo.plusHealth);
+                    if (selects[y].resultInfo.plusHealth != 0)
+                    {
+                        effectOffSet += 128;
+                    }
+
                     StateController.Instance.AddStateValue(StateType.WRITING, selects[y].resultInfo.plusWriting);
+                    if (selects[y].resultInfo.plusWriting != 0)
+                    {
+                        effectOffSet += 128;
+                    }
+
                     SetLayout();
                 }); // 만약 분기 이벤트가 아니라면 다음 선택지로 그냥 넘어가게
             }
