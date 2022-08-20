@@ -16,27 +16,28 @@ public class ScreenFader : MonoSingleton<ScreenFader>
     {
         float timer = 0f;
 
+        Time.timeScale = 0;
         while (timer <= 1f)
         {
-            timer += Time.deltaTime / (fadeTime / 2);
+            timer += Time.unscaledDeltaTime / (fadeTime / 2);
             fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(0, 1, timer));
             yield return null;
         }
 
         onCompleteFadeOut?.Invoke();
-
         yield return new WaitForSecondsRealtime(waitTime);
 
         timer = 0f;
 
         while (timer <= 1f)
         {
-            timer += Time.deltaTime / (fadeTime / 2);
+            timer += Time.unscaledDeltaTime / (fadeTime / 2);
             fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(1, 0, timer));
             yield return null;
         }
 
         onCompleteFadeIn?.Invoke();
+        Time.timeScale = 1;
 
         yield return null;
     }
