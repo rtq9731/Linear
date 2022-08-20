@@ -215,7 +215,7 @@ MonoBehaviour:
         \uC4F0\uACE0\uC790 \uD558\uB294 \uAE00\uC740\u2026"
       upperDialog: []
       sprites:
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 3b9cc2044ceb1c847ae71391774ffe28, type: 3}
       selects:
       - isChapterSelect: 0
         isEndSelect: 0
