@@ -943,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1010652951
 Transform:
   m_ObjectHideFlags: 0
@@ -1125,14 +1125,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 495070533}
     m_Modifications:
-    - target: {fileID: 652301315, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -258
-      objectReference: {fileID: 0}
-    - target: {fileID: 652301315, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 678334464, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -1164,14 +1156,6 @@ PrefabInstance:
     - target: {fileID: 3969409212819890695, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.41560364
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316499510021046820, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316499510021046820, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 5247670824005619742, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
       propertyPath: m_Pivot.x
