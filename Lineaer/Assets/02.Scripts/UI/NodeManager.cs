@@ -26,6 +26,8 @@ public class NodeManager : MonoSingleton<NodeManager>
     private bool isChapter3 = false;
     private bool buttonMoveComplete = false;
 
+    private int nowChapter = 0;
+
     public DialogPanel DialogPanel { get { return dialogPanel; } }
 
     public int CurChapter
@@ -88,6 +90,10 @@ public class NodeManager : MonoSingleton<NodeManager>
                 selectBtns[selects[i].idx].onClick.AddListener(() =>
                 {
                     StateController.Instance.SetChapter3(isChapter3);
+                    if (selects[y].result == 1 || selects[y].result == 2 || isChapter3)
+                    {
+                        FlowerController.Instance.SetFlowerLevel(++nowChapter);
+                    }
                     curChapter = selects[y].result;
                     curChapter = Array.IndexOf(data.chapters.Select(item => item.idx).ToArray(), curChapter);
                     curSelectNum = 0;
