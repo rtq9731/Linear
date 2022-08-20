@@ -69,8 +69,6 @@ public class DialogPanel : MonoBehaviour
 
             imageTalker.sprite = sprites[spriteIdx];
 
-
-            imageTalker.rectTransform.sizeDelta = sprites[spriteIdx].rect.size / 2f;
             StartCoroutine(SetUpperText(upperDialogs[dialogNum]));
             for (int i = 0; i < dialogs[dialogNum].Length; i++)
             {
