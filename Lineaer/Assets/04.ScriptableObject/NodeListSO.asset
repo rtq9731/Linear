@@ -54,11 +54,11 @@ MonoBehaviour:
       - {fileID: 21300000, guid: 86710fc9376815842b0ee2a1963a8e0f, type: 3}
       selects:
       - isChapterSelect: 0
-        isEndSelect: 1
+        isEndSelect: 0
         isRestartSelect: 0
         idx: 0
         selectInfo: "\uC81C\uAC00\uC694?"
-        result: 7
+        result: 2
         resultInfo:
           plusMoney: 0
           plusMental: 0
