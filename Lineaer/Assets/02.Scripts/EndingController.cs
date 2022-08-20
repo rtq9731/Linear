@@ -61,7 +61,7 @@ public class EndingController : MonoSingleton<EndingController>
 
             yield return new WaitForSeconds(2f);
 
-            while (textEnding.text != "")
+            while (textEnding.text.Length >= 1)
             {
                 textEnding.text.Remove(textEnding.text.Length - 1);
                 yield return new WaitForSeconds(0.075f);
