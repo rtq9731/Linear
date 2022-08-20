@@ -99,6 +99,11 @@ public class NodeManager : MonoSingleton<NodeManager>
                     curSelectNum = 0;
                     data.chapters[curChapter].Shuffle();
                     SetLayout();
+                    TranslationManager.Instance.SelectToSelect(() =>
+                    {
+                        audioSource.Play();
+                        SetLayout();
+                    });
                 }); // 만약 분기 이벤트라면 몇번 챕터로 가는지 체크
             }
             else if (selects[i].isEndSelect)
@@ -115,8 +120,11 @@ public class NodeManager : MonoSingleton<NodeManager>
                         curChapter = selects[y].result;
                         ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () =>
                         {
-                            audioSource.Play();
-                            SetLayout();
+                            TranslationManager.Instance.SelectToSelect(() =>
+                            {
+                                audioSource.Play();
+                                SetLayout();
+                            });
                         });
 
                         curSelectNum = 0;
