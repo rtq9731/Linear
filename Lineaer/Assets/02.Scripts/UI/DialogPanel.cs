@@ -7,6 +7,7 @@ using DG.Tweening;
 public class DialogPanel : MonoBehaviour
 {
     [SerializeField] Text textDialog;
+    [SerializeField] Text[] textUpperDialog;
     [SerializeField] Image imageTalker = null;
     [SerializeField] Image imageDialogComplete = null;
     [SerializeField] AudioClip[] clickSounds = null;

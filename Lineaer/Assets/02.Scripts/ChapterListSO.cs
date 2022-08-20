@@ -30,6 +30,7 @@ public class NodeInfo
 {
     public int idx = 0;
     [TextArea] public string[] dialogs = null;
+    [TextArea] public string[] upperDialog = null;
     public Sprite[] sprites = null;
     public SelectInfo[] selects = null;
 }

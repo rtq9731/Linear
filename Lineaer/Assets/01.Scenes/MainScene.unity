@@ -541,9 +541,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 495070533}
     m_Modifications:
-    - target: {fileID: 1176934241, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
+    - target: {fileID: 107777905, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_Text
+      value: "\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300"
+      objectReference: {fileID: 0}
+    - target: {fileID: 107777905, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 126663465, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_Text
+      value: "\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300"
+      objectReference: {fileID: 0}
+    - target: {fileID: 126663465, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 676689465, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_Text
+      value: "\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300"
+      objectReference: {fileID: 0}
+    - target: {fileID: 676689465, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392446999, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_Text
+      value: "\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300\uC0AC\uC704\uB300"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392446999, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1070303932381572002, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
       propertyPath: mainLayout
@@ -584,18 +612,6 @@ PrefabInstance:
     - target: {fileID: 5247670824005619742, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
       propertyPath: m_SizeDelta.y
       value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247670824005619742, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247670824005619742, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247670824005619742, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5247670824005619742, guid: 645b64847442c264e980e8a55e80bf63, type: 3}
       propertyPath: m_LocalPosition.x
