@@ -56,7 +56,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             selectBtns[i].gameObject.SetActive(false); // ¹öÆ° ²ô±â
         }
 
-        dialogPanel.SetDialog(nodeInfo.sprites, nodeInfo.dialogs, () => SetBtns(nodeInfo.selects));
+        dialogPanel.SetDialog(nodeInfo.sprites, nodeInfo.dialogs, nodeInfo.upperDialog, () => SetBtns(nodeInfo.selects));
     }
 
     public void SetBtns(SelectInfo[] selects)

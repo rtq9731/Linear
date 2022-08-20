@@ -17,14 +17,17 @@ public class DialogPanel : MonoBehaviour
 
     Sprite[] sprites = null;
     string[] dialogs = null;
+    string[] upperDialogs = null;
 
     int dialogNum = 0;
 
     bool isSkip = false;
+    bool isUpperDialog = false;
 
-    public void SetDialog(Sprite[] sprites, string[] dialogs, System.Action onComplete)
+    public void SetDialog(Sprite[] sprites, string[] dialogs, string[] upperDialogs, System.Action onComplete)
     {
         this.dialogs = dialogs;
+        this.upperDialogs = upperDialogs;
         this.sprites = sprites;
         dialogNum = 0;
         isSkip = false;
@@ -57,10 +60,14 @@ public class DialogPanel : MonoBehaviour
         {
             int x = dialogNum;
             textDialog.text = "";
+            for (int i = 0; i < textUpperDialog.Length; i++)
+            {
+                textUpperDialog[i].text = "";
+            }
             imageTalker.sprite = sprites[dialogNum];
 
             imageTalker.rectTransform.sizeDelta = sprites[dialogNum].rect.size / 2f;
-
+            StartCoroutine(SetUpperText(upperDialogs[dialogNum]));
             for (int i = 0; i < dialogs[dialogNum].Length; i++)
             {
                 textDialog.text += dialogs[dialogNum][i];
@@ -74,6 +81,7 @@ public class DialogPanel : MonoBehaviour
                 audioSource.Play();
                 yield return new WaitForSeconds(0.1f);
             }
+            yield return new WaitWhile(() => isUpperDialog);
 
             imageDialogComplete.gameObject.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
@@ -84,5 +92,38 @@ public class DialogPanel : MonoBehaviour
         }
 
         onComplete?.Invoke();
+    }
+
+    private IEnumerator SetUpperText(string text)
+    {
+        isUpperDialog = true;
+        int line = 0;
+        for (int i = 0; i < text.Length; i++)
+        {
+            if (text[i] == '\n') // 만약 줄바꿈이 온다면
+            {
+                line++;
+                i++;
+            }
+
+            textUpperDialog[line].text += text[i];
+
+            if (isSkip)
+            {
+                isSkip = false;
+                for (int j = 0; j < text.Length; j++)
+                {
+                    if (text[j] == '\n') // 만약 줄바꿈이 온다면
+                    {
+                        line++;
+                    }
+
+                    textUpperDialog[line].text += text[j];
+                }
+                break;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+        isUpperDialog = false;
     }
 }
