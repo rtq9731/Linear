@@ -78,7 +78,7 @@ public class NodeManager : MonoSingleton<NodeManager>
                     curChapter = selects[y].result;
                     curChapter = Array.IndexOf(data.chapters.Select(item => item.idx).ToArray(), curChapter);
                     curSelectNum = 0;
-                    data.chapters.Find(item => item.idx == curChapter).Shuffle();
+                    data.chapters[curChapter].Shuffle();
                     SetLayout();
                 }); // 만약 분기 이벤트라면 몇번 챕터로 가는지 체크
             }
