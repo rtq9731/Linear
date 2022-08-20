@@ -9,15 +9,11 @@ public class NodeManager : MonoSingleton<NodeManager>
 {
     [SerializeField] ChapterListSO data = null;
     [SerializeField] DialogPanel dialogPanel = null;
-    [SerializeField] DialogPanel endDialogPanel = null;
+    [SerializeField] Image bgImage = null;
 
     [SerializeField] Text textdialog = null;
 
     [SerializeField] Button[] selectBtns = null;
-
-    [SerializeField] RectTransform[] endLayout = null;
-
-    [SerializeField] RectTransform mainLayout = null;
 
     [SerializeField] AudioSource audioSource = null;
 
@@ -46,7 +42,6 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public void SetLayout()
     {
-        selectBtns.ToList().ForEach(item => item.GetComponentsInChildren<Text>()[1].gameObject.SetActive(false));
         NodeInfo nodeInfo = null;
         if (curSelectNum >= data.chapters.Find(item => item.idx == curChapter).pageCnt)
         {
@@ -60,11 +55,13 @@ public class NodeManager : MonoSingleton<NodeManager>
         for (int i = 0; i < selectBtns.Length; i++)
         {
             selectBtns[i].onClick.RemoveAllListeners(); // 모든 버튼 초기화
+            selectBtns[i].GetComponentsInChildren<Text>()[1].text = "";
             selectBtns[i].GetComponent<RectTransform>().anchoredPosition += Vector2.right * 2000; // 위치도 오른쪽으로 숨김
             selectBtns[i].interactable = false; // 버튼 상호작용 없애기
             selectBtns[i].gameObject.SetActive(false); // 버튼 끄기
         }
 
+        // bgImage.sprite = nodeInfo.bgSprites;
         dialogPanel.SetDialog(nodeInfo.sprites, nodeInfo.dialogs, nodeInfo.upperDialog, () => SetBtns(nodeInfo.selects));
     }
 
