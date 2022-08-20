@@ -90,7 +90,7 @@ public class NodeManager : MonoSingleton<NodeManager>
             }
             else if (selects[i].isRestartSelect)
             {
-                selectBtns[selects[i].idx].onClick.AddListener(() => UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene"));
+                selectBtns[selects[i].idx].onClick.AddListener(() => UnityEngine.SceneManagement.SceneManager.LoadScene("StartScene"));
             }
             else
             {
