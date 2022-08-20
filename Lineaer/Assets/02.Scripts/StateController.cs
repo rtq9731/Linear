@@ -121,8 +121,7 @@ public class StateController : MonoSingleton<StateController>
                 break;
         }
 
-        NodeManager.Instance.CurChapter = endingIdx;
-        NodeManager.Instance.SetLayout();
+        NodeManager.Instance.SetLetter(endingIdx);
     }
 
     private IEnumerator ChangeStateValue(StateType stateType, float value, float duration = 1.25f)

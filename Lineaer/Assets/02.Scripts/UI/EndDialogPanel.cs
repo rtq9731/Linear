@@ -25,6 +25,11 @@ public class EndDialogPanel : MonoBehaviour
     bool isSkip = false;
     bool isUpperDialog = false;
 
+    public void StopDialog()
+    {
+        StopCoroutine(routine);
+    }
+
     public void SetDialog(Sprite[] sprites, string[] dialogs, string[] upperDialogs, System.Action onComplete)
     {
         this.dialogs = dialogs;

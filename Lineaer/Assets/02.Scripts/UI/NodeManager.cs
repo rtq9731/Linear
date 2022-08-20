@@ -25,6 +25,7 @@ public class NodeManager : MonoSingleton<NodeManager>
     private bool isEndingChapter = false;
     private bool isChapter3 = false;
     private bool buttonMoveComplete = false;
+    private bool isEnded = false;
 
     private int nowChapter = 0;
 
@@ -51,8 +52,22 @@ public class NodeManager : MonoSingleton<NodeManager>
         SetLayout();
     }
 
+    public void SetLetter(int curChapter)
+    {
+        isEnded = true;
+        this.curChapter = curChapter;
+        FindObjectOfType<BGM>().StopBGM();
+        ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () => audioSource.Play(), () =>
+        {
+            TranslationManager.Instance.SelectToEnding(data.chapters.Find(item => item.idx == curChapter).endNode);
+        });
+    }
+
     public void SetLayout()
     {
+        if (isEnded)
+            return;
+
         NodeInfo nodeInfo = null;
         if (curSelectNum >= data.chapters.Find(item => item.idx == curChapter).pageCnt)
         {
@@ -124,14 +139,27 @@ public class NodeManager : MonoSingleton<NodeManager>
                     else
                     {
                         curChapter = selects[y].result;
-                        ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () =>
+
+                        if(curChapter == 108 || curChapter == 109)
                         {
-                            TranslationManager.Instance.SelectToSelect(() =>
+                            ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () =>
                             {
                                 audioSource.Play();
-                                SetLayout();
+                                TranslationManager.Instance.SelectToSelect(() =>
+                                {
+                                    SetLayout();
+                                });
                             });
-                        });
+                        }
+                        else
+                        {
+
+                            isEnded = true;
+                            ScreenFader.Instance.ScreenFade(2f, audioSource.clip.length, () => audioSource.Play(), () =>
+                            {
+                                TranslationManager.Instance.SelectToEnding(data.chapters.Find(item => item.idx == curChapter).endNode);
+                            });
+                        }
 
                         curSelectNum = 0;
                         FindObjectOfType<BGM>().StopBGM();
