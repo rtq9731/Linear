@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ArrowController : MonoSingleton<ArrowController>
 {
@@ -24,7 +25,9 @@ public class ArrowController : MonoSingleton<ArrowController>
             arrowImages[(int)type].sprite = place;
             return;
         }
+
         arrowImages[(int)type].sprite = addValue > 20 ? doubleArrowSprite : arrowSprite;
+
         arrowImages[(int)type].transform.rotation = Quaternion.Euler(0, 0, addValue < 0 ? 0 : 180);
     }
 }
