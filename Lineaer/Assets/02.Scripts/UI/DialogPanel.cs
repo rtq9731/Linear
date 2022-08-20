@@ -109,7 +109,6 @@ public class DialogPanel : MonoBehaviour
 
     private IEnumerator SetUpperText(string text)
     {
-        Debug.Log("윗첨자 세팅!");
         isUpperDialog = true;
         int line = 0;
         for (int i = 0; i < text.Length; i++)
