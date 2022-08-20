@@ -43,6 +43,7 @@ public class SelectInfo
     public bool isRestartSelect = false;
     public int idx = 0;
     public string selectInfo;
+    public string selectInfoUpper = "";
     public int result = 0;
     public ResultInfo resultInfo = null;
 }

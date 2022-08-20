@@ -46,6 +46,7 @@ public class NodeManager : MonoSingleton<NodeManager>
 
     public void SetLayout()
     {
+        selectBtns.ToList().ForEach(item => item.GetComponentsInChildren<Text>()[1].gameObject.SetActive(false));
         NodeInfo nodeInfo = null;
         if (curSelectNum >= data.chapters.Find(item => item.idx == curChapter).pageCnt)
         {
@@ -114,6 +115,12 @@ public class NodeManager : MonoSingleton<NodeManager>
             }
 
             selectBtns[selects[i].idx].GetComponentInChildren<Text>().text = selects[i].selectInfo;
+            if(selects[i].selectInfoUpper != "")
+            {
+                Text textInfoUpper = selectBtns[selects[i].idx].GetComponentsInChildren<Text>()[1];
+                textInfoUpper.text = selects[i].selectInfoUpper;
+                textInfoUpper.gameObject.SetActive(true);
+            }
 
         }
 
