@@ -13,6 +13,8 @@ public class StateController : MonoSingleton<StateController>
     private const float MAX_VALUE = 100f;
     private const float MIN_VALUE = 0f;
 
+    private bool _isChapter3 = false;
+
     private void Awake()
     {
         stateValues = new float[(int)StateType.COUNT];
@@ -60,6 +62,13 @@ public class StateController : MonoSingleton<StateController>
 
 
         stateValues[(int)stateType] += value;
+
+
+        if (_isChapter3)
+        {
+            stateValues[(int)stateType] = Mathf.Clamp(stateValues[(int)stateType], MIN_VALUE + 1, MAX_VALUE - 1);
+        }
+
         CheckedStateLimited(stateType);
         StartCoroutine(ChangeStateValue((StateType)stateType, stateValues[(int)stateType]));
     }
@@ -125,5 +134,10 @@ public class StateController : MonoSingleton<StateController>
         _stateImages[(int)stateType].fillAmount = endValue;
         yield return new WaitForSeconds(0.25f);
         _stateImages[(int)stateType].gameObject.transform.GetChild(0).GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+    }
+
+    public void SetChapter3(bool isChapter3)
+    {
+        _isChapter3 = isChapter3;
     }
 }
