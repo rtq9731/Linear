@@ -24,11 +24,6 @@ public class EndingController : MonoSingleton<EndingController>
         "Àª¸®¾ö ¼ÎÀÍ½ºÇÇ¾î!"
     };
 
-    private void Start()
-    {
-        Ending();
-    }
-
     private void PlayClickSound()
     {
         clickSource.clip = clickSounds[clickNum % clickSounds.Length];
@@ -37,7 +32,8 @@ public class EndingController : MonoSingleton<EndingController>
 
     public void Ending()
     {
-        ScreenFader.Instance.ScreenFade(1f, 1f, () => {
+        ScreenFader.Instance.ScreenFade(1f, 1f, () =>
+        {
             foreach (var item in removeObjs)
             {
                 item.gameObject.SetActive(false);
@@ -66,10 +62,13 @@ public class EndingController : MonoSingleton<EndingController>
 
             yield return new WaitForSeconds(2f);
 
-            while (textEnding.text.Length >= 1)
+            if (i == 0)
             {
-                textEnding.text = textEnding.text.Remove(textEnding.text.Length - 1);
-                yield return new WaitForSeconds(0.075f);
+                while (textEnding.text.Length >= 1)
+                {
+                    textEnding.text = textEnding.text.Remove(textEnding.text.Length - 1);
+                    yield return new WaitForSeconds(0.075f);
+                }
             }
 
             if (i < dialogs.Length - 1)
